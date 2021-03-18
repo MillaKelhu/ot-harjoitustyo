@@ -8,4 +8,4 @@
 
 Täällä on nyt lähinnä ensimmäisen viikon __markdown__ -testejä, eli ei siis mitään sen _ihmeellisempää_.
 
-✧･ﾟ: *✧･ﾟ:* 　_Iloista päivänjatkoa kaikille tiedoston lukijoille_　 *:･ﾟ✧*:･ﾟ✧
+♡ ✧･ﾟ: *✧･ﾟ:*♡  　_Iloista päivänjatkoa kaikille tiedoston lukijoille_　 ♡ *:･ﾟ✧*:･ﾟ✧ ♡
