@@ -1,0 +1,110 @@
+
+    file1 poistettu ja file2 uudelleennimetty
+
+ tiedostoja/file1             | 0
+ tiedostoja/{file2 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 3160e5b7c7f3390531c73dd38991bee58ef9cb1f
+Author: Milla Kelhu <milla.kelhu@gmail.com>
+Date:   Thu Mar 18 16:32:27 2021 +0200
+
+    kansio tiedostoja lisätty
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 0484eb4a8e0cd816555a73646a9d3e39048bb841
+Author: Milla Kelhu <milla.kelhu@gmail.com>
+Date:   Thu Mar 18 16:23:07 2021 +0200
+
+    eka.txt ja kolmas.txt muokattu
+
+ eka.txt    | 3144 +-----------------------------------------------------------
+ kolmas.txt |    4 +-
+ 2 files changed, 10 insertions(+), 3138 deletions(-)
+
+commit 443e9f85af9df7c99650764aeeb967cac77d2002
+Author: Milla Kelhu <milla.kelhu@gmail.com>
+Date:   Thu Mar 18 16:04:09 2021 +0200
+
+    tiedosto.txt uudelleennimetty
+
+ tiedosto.txt => eka.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit ece99a77e82417f529d31c6df08e8802178be280
+Author: Milla Kelhu <milla.kelhu@gmail.com>
+Date:   Thu Mar 18 16:01:42 2021 +0200
+
+    toinen.txt poistettu
+
+ toinen.txt | 6 ------
+ 1 file changed, 6 deletions(-)
+
+commit 0fcf72945d5371dd71b229f9ee22b420f7a0a239
+Author: Milla Kelhu <milla.kelhu@gmail.com>
+Date:   Thu Mar 18 15:58:17 2021 +0200
+
+    tiedosto.txt muokattu
+
+ tiedosto.txt | 1277 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 1277 insertions(+)
+
+commit 78a6253ef79f841f7969f6a24c2a33e3c8718531
+Author: Milla Kelhu <milla.kelhu@gmail.com>
+Date:   Thu Mar 18 15:53:54 2021 +0200
+
+    tiedosto.txt muokattu
+
+ tiedosto.txt | 2232 ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 2232 insertions(+)
+
+commit 0067aad985c378f6028eb23ef9acff890c52bdd9
+Author: Milla Kelhu <milla.kelhu@gmail.com>
+Date:   Thu Mar 18 15:46:24 2021 +0200
+
+    kansio stuff lisätty
+
+ stuff/neljas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 153bad89a9f06202d374468cbc9fdb6ca61c0ad3
+Author: Milla Kelhu <milla.kelhu@gmail.com>
+Date:   Thu Mar 18 15:44:07 2021 +0200
+
+    toinen.txt ja komas.txt muokattu
+
+ kolmas.txt | 3 +++
+ toinen.txt | 6 ++++++
+ 2 files changed, 9 insertions(+)
+
+commit 5ad6375c2cd00f95e9750cfd3c9feedae0caca63
+Author: Milla Kelhu <milla.kelhu@gmail.com>
+Date:   Thu Mar 18 15:39:55 2021 +0200
+
+    kolmas.txt luotu
+
+ kolmas.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 8ab8c1d6a3c722b55ee812d144da5c8f85de7bf0
+Author: Milla Kelhu <milla.kelhu@gmail.com>
+Date:   Thu Mar 18 15:37:57 2021 +0200
+
+    tiedosto.txt muokattu ja toinen.txt lisätty
+
+ tiedosto.txt | 3 +++
+ toinen.txt   | 0
+ 2 files changed, 3 insertions(+)
+
+commit b6e00c5a5d294a2a0a0e7951a0dc0e547fe32a6f
+Author: Milla Kelhu <milla.kelhu@gmail.com>
+Date:   Thu Mar 18 15:33:56 2021 +0200
+
+    tiedosto.txt luotu
+
+ tiedosto.txt | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
