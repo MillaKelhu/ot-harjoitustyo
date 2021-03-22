@@ -1,6 +1,8 @@
 #  README 
 
-##  Viikko 1 
+## Tehtävät
+
+###  Viikko 1 
 
 [komentorivi.txt](https://github.com/MillaKelhu/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt) 
 
