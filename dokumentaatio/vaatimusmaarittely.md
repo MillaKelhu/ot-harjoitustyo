@@ -37,7 +37,7 @@ Ainakin alkuvaiheessa käyttäjiä on vain yhdentyyppisiä. Käyttäjä voi luod
     * Sisar- ja velipuolet
 * Sukupuusta voidaan poistaa (muita kuin juuri-)henkilöitä, ja tietyin ehdoin näihin henkilöihin lisäksi liittyneet henkilöt poistuvat samalla
   * Jos henkilö X on molempien vanhempiensa ainoa lapsi, eikä kukaan tämän vanhemmista, isovanhemmista, yms. ole em. _juurihenkilö_, X:n mukana poistuvat myös tämän vanhemmat, isovanhemmat, yms.
-  * Jos henkilö X:n jälkeläisistä alkavassa linjassa ei ole em. _juurihenkilöä_ tai tämän puolisoa, tällaisten jälkeläisten linja poistuu henkilö X:n mukana.
+  * Jos henkilö X:n jälkeläisistä alkavassa linjassa ei ole em. _juurihenkilöä_ tai tämän puolisoa, ja X on jälkeläisten ainoa vanhempi, tällaisten jälkeläisten linja poistuu henkilö X:n mukana.
   * Jos henkilö X:n puoliso ei ole mitään biologista sukua em. _juurihenkilölle_, tämä puoliso ja puolison sukulaiset poistuvat X:n mukana.   
 * Sukupuu kykenee tunnistamaan ja kertomaan eri henkilöiden väliset sukulaisuussuhteet
 * Sukupuun henkilöihin voidaan liittää nimen lisäksi erinäisiä tietoja:
@@ -51,14 +51,15 @@ Ainakin alkuvaiheessa käyttäjiä on vain yhdentyyppisiä. Käyttäjä voi luod
   * Koulutus
   * Kiinnostuksenkohteet tai harrastukset
   * Yms.
+* Henkilön nimeä tai muita tietoja voidaan muokata
 * Sukupuusta voidaan hakea tiettyjä henkilöitä esim. nimen perusteella
 * Aikojen tarkistus, mm. seuraavissa tapauksissa:
   * Syntymä- tai kuolinvuodeksi ei voida määritellä vuotta tulevaisuudesta
   * Vanhemman syntymävuoden on oltava ennen lapsen syntymävuotta
     * Lisäksi syntymävuoden on oltava vähintäänkin esim. 15 vuotta ennen lapsen syntymää
   * Vanhemman kuolinvuoden on oltava lapsen syntymävuonna tai sen jälkeen
-    * Pienenä poikkeuksena isät, mutta näidenkään kuolinaika ei voi olla yli 9 kuukautta ennen lapsen syntymää
-  * Aviopuolisoiden avioliiton solmimisen ajankohta on molemmilla puolisoilla sama. Sama päte mahdollisen eron ajankohtaan.
+    * Pienenä poikkeuksena isät, mutta näidenkään kuolinaika ei voi olla paljoa yli 9 kuukautta ennen lapsen syntymää
+  * Aviopuolisoiden avioliiton solmimisen ajankohta on molemmilla puolisoilla sama. Sama pätee mahdollisen eron ajankohtaan.
 * Sukupuun voi poistaa
 * Sukupuita voi luoda useita
 * Käyttäjätunnuksen (ja sen mukana käyttäjätunnukseen liittyvät sukupuut) voi poistaa
