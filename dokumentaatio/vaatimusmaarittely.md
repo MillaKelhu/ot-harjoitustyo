@@ -8,6 +8,9 @@ Sovelluksen tarkoituksena on reseptikirjan luominen ja ylläpito.
 
 Ainakin aluksi sovelluksessa on ainoastaan yhden tyyppisiä käyttäjiä, eli ns. _normaaleja käyttäjiä_. Myöhemmin voidaan ehkä lisätä sovellukseen jonkinlainen ylläpidosta vastaava käyttäjärooli.  
 
+## Käyttöliittymäluonnos
+[Käyttöliittymäluonnos](/OhTe/kayttoliittymaluonnos.png)
+
 ## Sovelluksen toiminnallisuudet
 
 ### Perustason toiminnallisuudet
