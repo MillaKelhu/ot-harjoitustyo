@@ -1,38 +1,38 @@
 # Vaatimusmäärittely
 
-### Sovelluksen tarkoitus
+## Sovelluksen tarkoitus
 
 Sovelluksen tarkoituksena on reseptikirjan luominen ja ylläpito.
 
-### Käyttäjät
+## Käyttäjät
 
 Ainakin aluksi sovelluksessa on ainoastaan yhden tyyppisiä käyttäjiä, eli ns. _normaaleja käyttäjiä_. Myöhemmin voidaan ehkä lisätä sovellukseen jonkinlainen ylläpidosta vastaava käyttäjärooli.  
 
-### Sovelluksen toiminnallisuudet
+## Sovelluksen toiminnallisuudet
 
-#### Perustason toiminnallisuudet
+### Perustason toiminnallisuudet
 
-##### Ennen kirjautumista
+#### Ennen kirjautumista
 * Uuden käyttäjätunnuksen luominen sovellukseen
   * Käyttäjätunnuksen on oltava uniikki, muuten annetaan virheilmoitus
 * Sovellukseen voi kirjautua em. tunnuksella
   * Jos tunnusta ei löydy sovelluksen tiedoista, annetaan virheilmoituksen
 
-##### Kirjautumisen jälkeen
+#### Kirjautumisen jälkeen
 * Käyttäjä näkee luomansa reseptit
   * Reseptit näkyvät ainoastaan ne luoneelle käyttäjälle
 * Käyttäjä voi luoda uuden reseptin
 * Käyttäjä voi kirjautua ulos sovelluksesta
 
-#### Toiminnallisuuden jatkokehitys
+### Toiminnallisuuden jatkokehitys
 Mahdollisuuksien mukaan sovellusta parannetaan esim. seuraavin toiminnallisuuksin:
 
-##### Ennen kirjautumista
+#### Ennen kirjautumista
 * Käyttäjän tulee luoda salasana uuden käyttäjätunnuksen luomisen yhteydessä
 * Salasanaa kysytään kirjautuessa
   * Väärä tai puuttuva salasana aiheuttaa virheilmoituksen
 
-##### Kirjautumisen jälkeen
+#### Kirjautumisen jälkeen
 * Reseptien muokkaus
 * Reseptien poisto
 * Käyttäjä pystyy luomaan eri kategorioita, esim. jälkiruoka, vegaani, pääsiäinen, tms. joihin reseptit voi luokitella 
