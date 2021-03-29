@@ -47,4 +47,4 @@ Mahdollisuuksien mukaan sovellusta parannetaan esim. seuraavin toiminnallisuuksi
 * Reseptin ainesosien määrien säätäminen annoksien mukaan
 * Käyttäjätunnusta tai salasanaa voi muuttaa
 * Käyttäjätunnuksen voi poistaa
-* Sisarsovellus: Ruokakaappisovellus, jonka voi linkittää tämän yhteyteen, ja sen perusteella käyttäjälle voidaan suositella reseptejä, joihin on raaka-aineet valmiina
+* Sisarsovellus: Ruokakaappisovellus, jonka voi linkittää tämän yhteyteen, ja sen perusteella käyttäjälle voidaan suositella reseptejä, joihin on raaka-aineet valmiina, tai sen perusteella minkä raaka-aineen käyttö on kiireellistä, yms.
