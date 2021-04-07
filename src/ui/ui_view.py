@@ -1,7 +1,7 @@
 from tkinter import Tk, ttk, constants
-from login_view import LoginView
-from signin_view import SigninView
-from book_view import BookView
+from ui.login_view import LoginView
+from ui.signin_view import SigninView
+from ui.book_view import BookView
 
 class UI:
     def __init__(self, root):
