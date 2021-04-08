@@ -22,13 +22,13 @@ class UI:
 
         self._frame = LoginView(
             self._root,
-            self._show_book_view,
-            self._show_signin_view
+            self._show_book,
+            self._show_signin
         )
 
         self._frame.pack()
 
-    def _show_book_view(self):
+    def _show_book(self):
         self._destroy_current()
 
         self._frame = BookView(
@@ -36,7 +36,7 @@ class UI:
             self._show_login
         )
 
-    def _show_signin_view(self):
+    def _show_signin(self):
         self._destroy_current()
 
         self._frame = SigninView(
