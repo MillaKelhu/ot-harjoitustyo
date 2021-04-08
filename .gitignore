@@ -2,4 +2,5 @@
 .coverage
 htmlcov
 __pycache__
-.db
+users.db
+/src/users.db

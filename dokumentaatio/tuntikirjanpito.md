@@ -4,4 +4,5 @@ Päivämäärä | Aika (tunneissa) | Mitä tehty
 25.3. | 2 | Tutustuminen TkInteriin
 29.3. | 2 | Sovelluksen suunnittelu
 7.4. | 5 | Lisää tutustumista TkInteriin, käyttöliittymän alustava toteutus 
-Yht: | 10 |
+7.4. | 2 | User-olion ja käyttäjätietokannan toteutus
+Yht: | 12 |
