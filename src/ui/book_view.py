@@ -1,10 +1,11 @@
 from tkinter import Tk, ttk, constants
 
 class BookView:
-    def __init__(self, root, handle_logout):
+    def __init__(self, root, handle_logout, handle_new_recipe):
         self._root = root
         self._frame = None
         self._handle_logout = handle_logout
+        self._handle_new_recipe = handle_new_recipe
 
         self._initialize()
 
@@ -19,7 +20,8 @@ class BookView:
 
         new_recipe_button = ttk.Button(
             master=self._frame, 
-            text="New recipe"
+            text="New recipe",
+            command=self._handle_new_recipe
         )
 
         logout_button = ttk.Button(

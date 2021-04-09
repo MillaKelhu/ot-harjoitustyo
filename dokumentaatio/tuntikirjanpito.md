@@ -5,4 +5,6 @@ Päivämäärä | Aika (tunneissa) | Mitä tehty
 29.3. | 2 | Sovelluksen suunnittelu
 7.4. | 5 | Lisää tutustumista TkInteriin, käyttöliittymän alustava toteutus 
 7.4. | 2 | User-olion ja käyttäjätietokannan toteutus
-Yht: | 12 |
+8.4. | 4 | Käyttäjätietokannan muokkaus ja korjaaminen, user-olion ja tietokannan poisto ja aloitus puhtaalta pöydältä
+9.4. | 3 | Käyttöliittymän korjaaminen, käyttäjätietokannan ja sitä hoitavien palveluiden alustava toteutus
+Yht: | 19 |

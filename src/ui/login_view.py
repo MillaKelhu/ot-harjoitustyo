@@ -1,4 +1,5 @@
 from tkinter import Tk, ttk, constants
+from functions.user_functions import UserFunctions
 
 class LoginView:
     def __init__(self, root, handle_login, handle_signin):
@@ -25,11 +26,11 @@ class LoginView:
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
-        
+
         login_button = ttk.Button(
             master=self._frame, 
             text="Log in",
-            command=self._handle_login
+            command=self._check_login
 
         )
         signin_button = ttk.Button(
@@ -37,6 +38,7 @@ class LoginView:
             text="Sign in",
             command=self._handle_signin
         )
+
         self._initialize_username_entry()
         
         login_button.grid(row=2, column=0, columnspan=2, padx=5, pady=5)
@@ -44,4 +46,10 @@ class LoginView:
 
         self._frame.grid_columnconfigure(0, weight=1, minsize=100)
 
-        self._frame.pack()
+    def _check_login(self):
+        username_data = str(self._username_entry.get())
+
+        if UserFunctions().log_in(username_data):
+            self._handle_login()
+        else:
+            pass
