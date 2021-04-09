@@ -7,4 +7,5 @@ Päivämäärä | Aika (tunneissa) | Mitä tehty
 7.4. | 2 | User-olion ja käyttäjätietokannan toteutus
 8.4. | 4 | Käyttäjätietokannan muokkaus ja korjaaminen, user-olion ja tietokannan poisto ja aloitus puhtaalta pöydältä
 9.4. | 3 | Käyttöliittymän korjaaminen, käyttäjätietokannan ja sitä hoitavien palveluiden alustava toteutus
-Yht: | 19 |
+9.4. | 2 | Testauksen ja testikattavuuden alustava toteuttaminen
+Yht: | 21 |

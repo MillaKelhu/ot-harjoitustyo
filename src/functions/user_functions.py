@@ -1,9 +1,9 @@
-from datacontrol.users_database import UserDatabase
+from datacontrol.users_database import user_database as default_user_database
 
 class UserFunctions:
-    def __init__(self):
+    def __init__(self, user_database=default_user_database):
         self._user = None
-        self._users = UserDatabase()
+        self._users = user_database
 
     def log_in(self, username):
 
@@ -22,11 +22,7 @@ class UserFunctions:
         user_added = self._users.add_user(username)
         return(user_added)
 
-if __name__ == "__main__":
-    ui = UserFunctions()
-    print(ui.log_in("Milla")) # True
-    print(ui.log_in("Jouko")) # False
-    print(ui.sign_in("Milla")) # False
-    print(ui.sign_in("Jouko")) # True
-    print(ui.log_out()) # True
-    print(ui.log_in("")) #False
+    def current_user(self):
+        return self._user
+
+user_functions = UserFunctions()

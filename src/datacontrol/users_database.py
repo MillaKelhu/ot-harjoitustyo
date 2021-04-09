@@ -27,10 +27,8 @@ class UserDatabase:
             self._db.execute("INSERT INTO Users (username) VALUES (?)", [username])
             return True
 
-if __name__ == "__main__":
-    userdb = UserDatabase()
-    print(userdb.search_user("Milla"))
-    print(userdb.add_user("Milla"))
-    print(userdb.search_user("Milla"))
-    print(userdb.search_user("Mari"))
-    print(userdb.search_user(""))
+    def erase_all_users(self):
+        self._db.execute("DROP TABLE Users")   
+        self._table_Users_exists()     
+
+user_database = UserDatabase()
