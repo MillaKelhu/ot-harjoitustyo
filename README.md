@@ -1,14 +1,8 @@
-#  README 
+#  Reseptikirja-app
 
-## Tehtävät
+Sovelluksen avulla on mahdollista pitää kirjaa omista resepteistä, ja sovelluksessa voi olla useampi kirjautunut käyttäjä. Tällä hetkellä sovellukseen on mahdollista luoda uusi käyttäjä, kirjautua sillä sisään, ja kirjautua ulos.
 
-###  Viikko 1 
-
-[komentorivi.txt](https://github.com/MillaKelhu/ot-harjoitustyo/blob/master/laskarit/viikko1/komentorivi.txt) 
-
-[gitlog.txt](https://github.com/MillaKelhu/ot-harjoitustyo/blob/master/laskarit/viikko1/gitlog.txt)
-
-## Harjoitustyö
+## Dokumentaatio
 
 [Vaatimusmäärittely](https://github.com/MillaKelhu/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
