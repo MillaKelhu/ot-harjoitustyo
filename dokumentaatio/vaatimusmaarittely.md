@@ -16,16 +16,17 @@ Ainakin aluksi sovelluksessa on ainoastaan yhden tyyppisiä käyttäjiä, eli ns
 ### Perustason toiminnallisuudet
 
 #### Ennen kirjautumista
-* Uuden käyttäjätunnuksen luominen sovellukseen
-  * Käyttäjätunnuksen on oltava uniikki, muuten annetaan virheilmoitus
-* Sovellukseen voi kirjautua em. tunnuksella
-  * Jos tunnusta ei löydy sovelluksen tiedoista, annetaan virheilmoituksen
+-[x] Uuden käyttäjätunnuksen luominen sovellukseen
+  - [x] Käyttäjätunnuksen on oltava uniikki
+  - [ ] Jos käyttäjätunnus ei ole uniikki, annetaan virheilmoitus
+- [x] Sovellukseen voi kirjautua em. tunnuksella
+  - [ ] Jos tunnusta ei löydy sovelluksen tiedoista, annetaan virheilmoituksen
 
 #### Kirjautumisen jälkeen
-* Käyttäjä näkee luomansa reseptit
-  * Reseptit näkyvät ainoastaan ne luoneelle käyttäjälle
-* Käyttäjä voi luoda uuden reseptin
-* Käyttäjä voi kirjautua ulos sovelluksesta
+- [] Käyttäjä näkee luomansa reseptit
+  - [] Reseptit näkyvät ainoastaan ne luoneelle käyttäjälle
+- [] Käyttäjä voi luoda uuden reseptin
+- [x] Käyttäjä voi kirjautua ulos sovelluksesta
 
 ### Toiminnallisuuden jatkokehitys
 Mahdollisuuksien mukaan sovellusta parannetaan esim. seuraavin toiminnallisuuksin:
