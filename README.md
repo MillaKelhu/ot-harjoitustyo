@@ -7,3 +7,5 @@ Sovelluksen avulla on mahdollista pitää kirjaa omista resepteistä, ja sovellu
 [Vaatimusmäärittely](https://github.com/MillaKelhu/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
 [Tuntikirjanpito](https://github.com/MillaKelhu/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
+
+[Arkkitehtuuri](https://github.com/MillaKelhu/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
