@@ -14,4 +14,4 @@ Päivämäärä | Aika (tunneissa) | Mitä tehty
 15.4. | 1 | Testien muokkaus ja korjaaminen, valekomponenttien luominen
 15.4. | 2 | Tietokantayhteyden muokkaaminen järkevämmäksi
 15.4. | 1 | Pylintin käyttöönotto ja koodin laadun korjaus
-Yht: | 29 |
+Yht: | 30 |
