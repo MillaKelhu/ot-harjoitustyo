@@ -5,6 +5,10 @@ def start(ctx):
     ctx.run("python3 src/index.py")
 
 @task
+def initialize_database(ctx):
+    ctx.run("python3 src/initialize_database.py")
+
+@task
 def test(ctx):
     ctx.run("pytest src")
 
@@ -15,3 +19,11 @@ def coverage(ctx):
 @task(coverage)
 def coverage_report(ctx):
     ctx.run("coverage html")
+
+@task
+def lint(ctx):
+    ctx.run("pylint src")
+
+@task
+def format(ctx):
+    ctx.run("autopep8 --in-place --recursive src")

@@ -1,6 +1,7 @@
 import unittest
 from functions.cookbookapp_functions import CookbookAppFunctions
 
+
 class FakeUserDatabase:
     def __init__(self):
         self._users = []
@@ -23,6 +24,7 @@ class FakeUserDatabase:
 
     def erase_all_users(self):
         self._users = []
+
 
 class FakeRecipesDatabase:
     def __init__(self):
@@ -51,15 +53,19 @@ class FakeRecipesDatabase:
     def erase_all_recipes(self):
         self._recipes = []
 
+
 class TestCookBookAppFunctions(unittest.TestCase):
     def setUp(self):
         self.fakeuserdatabase = FakeUserDatabase()
         self.fakerecipesdatabase = FakeRecipesDatabase()
-        self.cookbookapp_functions = CookbookAppFunctions(self.fakeuserdatabase, self.fakerecipesdatabase)
+        self.cookbookapp_functions = CookbookAppFunctions(
+            self.fakeuserdatabase, self.fakerecipesdatabase)
         self.fakeuserdatabase.add_user("Leon")
         self.fakeuserdatabase.add_user("Stansfield")
-        self.fakerecipesdatabase.add_recipe(1, "Sandwich", "Take a bread and butter it.")
-        self.fakerecipesdatabase.add_recipe(1, "Glass of milk", "Pour milk in glass.")
+        self.fakerecipesdatabase.add_recipe(
+            1, "Sandwich", "Take a bread and butter it.")
+        self.fakerecipesdatabase.add_recipe(
+            1, "Glass of milk", "Pour milk in glass.")
         self.fakerecipesdatabase.add_recipe(2, "Pickles", "Pickles")
 
     def test_log_in_works_with_existing_user_correctly(self):
@@ -94,11 +100,13 @@ class TestCookBookAppFunctions(unittest.TestCase):
     def test_users_recipes_returns_recipes_correctly_when_logged_in(self):
         self.cookbookapp_functions.log_in("Leon")
         returns = self.cookbookapp_functions.users_recipes()
-        self.assertEqual(returns, [(1, 1, "Sandwich", "Take a bread and butter it."), (2, 1, "Glass of milk", "Pour milk in glass.")])
+        self.assertEqual(returns, [(1, 1, "Sandwich", "Take a bread and butter it."), (
+            2, 1, "Glass of milk", "Pour milk in glass.")])
 
     def test_add_recipes_returns_True_correctly_when_logged_in(self):
         self.cookbookapp_functions.log_in("Stansfield")
-        returns = self.cookbookapp_functions.add_recipes("Chinese", "Order chinese food")
+        returns = self.cookbookapp_functions.add_recipes(
+            "Chinese", "Order chinese food")
         self.assertEqual(returns, True)
 
     def test_set_chosen_recipe_returns_True_with_existing_recipe(self):
@@ -119,7 +127,8 @@ class TestCookBookAppFunctions(unittest.TestCase):
         self.cookbookapp_functions.log_in("Leon")
         self.cookbookapp_functions.set_chosen_recipe("Glass of milk")
         returns = self.cookbookapp_functions.get_chosen_recipe()
-        self.assertEqual(returns, (2, 1, "Glass of milk", "Pour milk in glass."))
+        self.assertEqual(
+            returns, (2, 1, "Glass of milk", "Pour milk in glass."))
 
     def test_no_chosen_recipe_returns_True(self):
         returns = self.cookbookapp_functions.no_chosen_recipe()

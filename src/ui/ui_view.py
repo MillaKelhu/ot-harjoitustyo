@@ -5,6 +5,7 @@ from ui.book_view import BookView
 from ui.new_recipe_view import NewRecipeView
 from ui.recipe_view import RecipeView
 
+
 class UI:
     def __init__(self, root):
         self._root = root
@@ -72,5 +73,3 @@ class UI:
         )
 
         self._frame.pack()
-
-

@@ -12,4 +12,6 @@ Päivämäärä | Aika (tunneissa) | Mitä tehty
 14.4. | 2 | Käyttöliittymän muokkaus jotta edellä mainittuja palveluita voi käyttää
 14.4. | 1 | Lisätestien toteuttaminen
 15.4. | 1 | Testien muokkaus ja korjaaminen, valekomponenttien luominen
-Yht: | 27 |
+15.4. | 2 | Tietokantayhteyden muokkaaminen järkevämmäksi
+15.4. | 1 | Pylintin käyttöönotto ja koodin laadun korjaus
+Yht: | 29 |

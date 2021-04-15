@@ -1,6 +1,7 @@
 from tkinter import Tk, ttk, constants, Text, Scrollbar
 from functions.cookbookapp_functions import cookbookapp_functions
 
+
 class NewRecipeView:
     def __init__(self, root, handle_return):
         self._root = root
@@ -21,21 +22,24 @@ class NewRecipeView:
         name_label = ttk.Label(master=self._frame, text="Name:")
         self._name_entry = ttk.Entry(master=self._frame)
 
-        name_label.grid(row=1, column=0, sticky=(constants.W),padx=5, pady=15)
+        name_label.grid(row=1, column=0, sticky=(constants.W), padx=5, pady=15)
         self._name_entry.grid(row=1, column=1, padx=5, pady=15)
 
     def _initialize_instructions_field(self):
-        instructions_label = ttk.Label(master=self._frame, text="Instructions:")
+        instructions_label = ttk.Label(
+            master=self._frame, text="Instructions:")
         self._instructions_text = Text(master=self._frame)
 
-        instructions_label.grid(row=2, column=0, sticky=(constants.E, constants.W), padx=5, pady=5)
-        self._instructions_text.grid(row=3, rowspan=10, column=0, columnspan=2, sticky=(constants.E, constants.W), padx=5, pady=5)
+        instructions_label.grid(row=2, column=0, sticky=(
+            constants.E, constants.W), padx=5, pady=5)
+        self._instructions_text.grid(row=3, rowspan=10, column=0, columnspan=2, sticky=(
+            constants.E, constants.W), padx=5, pady=5)
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
 
         create_new_recipe_button = ttk.Button(
-            master=self._frame, 
+            master=self._frame,
             text="Create new recipe",
             command=self._check_entries
         )
@@ -50,9 +54,11 @@ class NewRecipeView:
 
         self._initialize_instructions_field()
 
-        create_new_recipe_button.grid(row=14, column=0, columnspan=2, sticky=(constants.W), padx=5, pady=5)
+        create_new_recipe_button.grid(
+            row=14, column=0, columnspan=2, sticky=(constants.W), padx=5, pady=5)
 
-        return_without_saving_button.grid(row=14, column=1, columnspan=2, sticky=(constants.E), padx=5, pady=5)
+        return_without_saving_button.grid(
+            row=14, column=1, columnspan=2, sticky=(constants.E), padx=5, pady=5)
 
         self._frame.grid_columnconfigure(0, weight=1, minsize=100)
 

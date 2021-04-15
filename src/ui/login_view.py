@@ -1,6 +1,7 @@
 from tkinter import Tk, ttk, constants
 from functions.cookbookapp_functions import cookbookapp_functions
 
+
 class LoginView:
     def __init__(self, root, handle_login, handle_signin):
         self._root = root
@@ -21,26 +22,28 @@ class LoginView:
         username_label = ttk.Label(master=self._frame, text="Username:")
         self._username_entry = ttk.Entry(master=self._frame)
 
-        username_label.grid(row=1, column=0, sticky=(constants.E, constants.W), padx=5, pady=15)
-        self._username_entry.grid(row=1, column=1, sticky=(constants.E, constants.W), padx=5, pady=15)
+        username_label.grid(row=1, column=0, sticky=(
+            constants.E, constants.W), padx=5, pady=15)
+        self._username_entry.grid(row=1, column=1, sticky=(
+            constants.E, constants.W), padx=5, pady=15)
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
 
         login_button = ttk.Button(
-            master=self._frame, 
+            master=self._frame,
             text="Log in",
             command=self._check_login
 
         )
         signin_button = ttk.Button(
-            master=self._frame, 
+            master=self._frame,
             text="Sign in",
             command=self._handle_signin
         )
 
         self._initialize_username_entry()
-        
+
         login_button.grid(row=2, column=0, columnspan=2, padx=5, pady=5)
         signin_button.grid(row=3, column=0, columnspan=2, padx=5, pady=5)
 

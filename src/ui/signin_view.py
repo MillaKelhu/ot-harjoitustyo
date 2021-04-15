@@ -1,6 +1,7 @@
 from tkinter import Tk, ttk, constants
 from functions.cookbookapp_functions import cookbookapp_functions
 
+
 class SigninView:
     def __init__(self, root, handle_create_new_user):
         self._root = root
@@ -17,11 +18,14 @@ class SigninView:
         self._frame.destroy()
 
     def _initialize_new_user_entry(self):
-        new_username_label = ttk.Label(master=self._frame, text="New username:")
+        new_username_label = ttk.Label(
+            master=self._frame, text="New username:")
         self._new_username_entry = ttk.Entry(master=self._frame)
 
-        new_username_label.grid(row=1, column=0, sticky=(constants.E, constants.W), padx=5, pady=15)
-        self._new_username_entry.grid(row=1, column=1, sticky=(constants.E, constants.W), padx=5, pady=15)
+        new_username_label.grid(row=1, column=0, sticky=(
+            constants.E, constants.W), padx=5, pady=15)
+        self._new_username_entry.grid(row=1, column=1, sticky=(
+            constants.E, constants.W), padx=5, pady=15)
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
@@ -33,8 +37,9 @@ class SigninView:
         )
 
         self._initialize_new_user_entry()
-        
-        self._new_user_button.grid(row=2, column=0, columnspan=2, padx=5, pady=5)
+
+        self._new_user_button.grid(
+            row=2, column=0, columnspan=2, padx=5, pady=5)
 
         self._frame.grid_columnconfigure(0, weight=1, minsize=100)
 
@@ -46,7 +51,3 @@ class SigninView:
                 self._handle_create_new_user()
         else:
             pass
-
-    
-
-        

@@ -1,38 +1,40 @@
-import sqlite3
+from database_connection import get_database_connection
+
 
 class RecipesDatabase:
-    def __init__(self):
-        self._db = sqlite3.connect("recipes.db")
+    def __init__(self, connection):
+        self._db = connection
         self._db.isolation_level = None
 
-        self._table_Recipes_exists()
-
-    def _table_Recipes_exists(self):
-        self._db.execute("CREATE TABLE IF NOT EXISTS Recipes (id INTEGER PRIMARY KEY, user_id INTEGER, name TEXT, instructions TEXT)")
-
     def search_recipe(self, user_id, name):
-        recipe = self._db.execute("SELECT * FROM Recipes WHERE user_id=? AND name=?", [user_id, name]).fetchone()
+        recipe = self._db.execute(
+            "SELECT * FROM recipes WHERE user_id=? AND name=?", [user_id, name]).fetchone()
 
         return recipe
 
     def add_recipe(self, user_id, name, instructions):
         recipe_exists = self.search_recipe(user_id, name)
 
-        if recipe_exists is not None:
-            return False
-        else:
-            self._db.execute("INSERT INTO Recipes (user_id, name, instructions) VALUES (?, ?, ?)", [user_id, name, instructions])
-            return True
+        if recipe_exists is None:
+            self._db.execute("INSERT INTO recipes (user_id, name, instructions) VALUES (?, ?, ?)", [
+                             user_id, name, instructions])
+
+        return not bool(recipe_exists)
 
     def search_users_recipes(self, user_id):
-        recipes = self._db.execute("SELECT * FROM Recipes WHERE user_id=?", [user_id]).fetchall()
+        recipes = self._db.execute(
+            "SELECT * FROM recipes WHERE user_id=?", [user_id]).fetchall()
 
         if recipes != []:
             return recipes
         return None
 
     def erase_all_recipes(self):
-        self._db.execute("DROP TABLE Recipes")   
-        self._table_Recipes_exists()   
+        cursor = self._db.cursor()
 
-recipes_database = RecipesDatabase()
+        cursor.execute("DELETE FROM recipes")
+
+        self._db.commit()
+
+
+recipes_database = RecipesDatabase(get_database_connection())

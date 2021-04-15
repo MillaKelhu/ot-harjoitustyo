@@ -1,6 +1,7 @@
 from tkinter import Tk, ttk, constants
 from functions.cookbookapp_functions import cookbookapp_functions
 
+
 class BookView:
     def __init__(self, root, handle_logout, handle_new_recipe, handle_recipe):
         self._root = root
@@ -25,9 +26,11 @@ class BookView:
     def _initialize_book_name_label(self):
         user = cookbookapp_functions.current_user()[1]
 
-        book_name_label = ttk.Label(master=self._frame, text=f"{user}'s cookbook")
+        book_name_label = ttk.Label(
+            master=self._frame, text=f"{user}'s cookbook")
 
-        book_name_label.grid(row=0, column=0, columnspan=2, sticky=(constants.E, constants.W), padx=5, pady=15)
+        book_name_label.grid(row=0, column=0, columnspan=2, sticky=(
+            constants.E, constants.W), padx=5, pady=15)
 
     def _handler_recipe(self, recipe_name):
         cookbookapp_functions.set_chosen_recipe(recipe_name)
@@ -35,7 +38,7 @@ class BookView:
 
     def _initialize_recipe_buttons(self):
         recipes = cookbookapp_functions.users_recipes()
-        
+
         if recipes is not None:
 
             for i in range(len(recipes)):
@@ -44,9 +47,11 @@ class BookView:
                 recipe_button = ttk.Button(
                     master=self._frame,
                     text=recipe[2],
-                    command=lambda recipe_name = recipe[2]: self._handler_recipe(recipe_name)
+                    command=lambda recipe_name=recipe[2]: self._handler_recipe(
+                        recipe_name)
                 )
-                recipe_button.grid(row=2+i, column=0, columnspan=4, sticky=(constants.E, constants.W), padx=5, pady=5)
+                recipe_button.grid(row=2+i, column=0, columnspan=4,
+                                   sticky=(constants.E, constants.W), padx=5, pady=5)
 
     def _initialize(self):
         self._frame = ttk.Frame(master=self._root)
@@ -54,7 +59,7 @@ class BookView:
         self._initialize_book_name_label()
 
         new_recipe_button = ttk.Button(
-            master=self._frame, 
+            master=self._frame,
             text="New recipe",
             command=self._handle_new_recipe
         )
@@ -65,8 +70,10 @@ class BookView:
             command=self._handler_logout
         )
 
-        new_recipe_button.grid(row=1, column=0, columnspan=2, sticky=(constants.W), padx=5, pady=5)
-        logout_button.grid(row=1, column=1, columnspan=2, sticky=(constants.E), padx=5, pady=5)
+        new_recipe_button.grid(row=1, column=0, columnspan=2,
+                               sticky=(constants.W), padx=5, pady=5)
+        logout_button.grid(row=1, column=1, columnspan=2,
+                           sticky=(constants.E), padx=5, pady=5)
 
         self._initialize_recipe_buttons()
 

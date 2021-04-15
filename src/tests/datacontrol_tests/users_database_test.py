@@ -1,6 +1,7 @@
 import unittest
 from datacontrol.users_database import user_database
 
+
 class TestUserDatabase(unittest.TestCase):
     def setUp(self):
         user_database.erase_all_users()
