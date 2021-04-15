@@ -1,5 +1,5 @@
 from tkinter import Tk, ttk, constants
-from functions.user_functions import user_functions
+from functions.cookbookapp_functions import cookbookapp_functions
 
 class LoginView:
     def __init__(self, root, handle_login, handle_signin):
@@ -49,7 +49,7 @@ class LoginView:
     def _check_login(self):
         username_data = str(self._username_entry.get())
 
-        if user_functions.log_in(username_data):
+        if cookbookapp_functions.log_in(username_data):
             self._handle_login()
         else:
             pass

@@ -8,4 +8,8 @@ Päivämäärä | Aika (tunneissa) | Mitä tehty
 8.4. | 4 | Käyttäjätietokannan muokkaus ja korjaaminen, user-olion ja tietokannan poisto ja aloitus puhtaalta pöydältä
 9.4. | 3 | Käyttöliittymän korjaaminen, käyttäjätietokannan ja sitä hoitavien palveluiden alustava toteutus
 9.4. | 2 | Testauksen ja testikattavuuden alustava toteuttaminen
-Yht: | 21 |
+14.4. | 2 | Reseptitietokannan ja sitä hoitavien palveluiden alustava toteutus
+14.4. | 2 | Käyttöliittymän muokkaus jotta edellä mainittuja palveluita voi käyttää
+14.4. | 1 | Lisätestien toteuttaminen
+15.4. | 1 | Testien muokkaus ja korjaaminen, valekomponenttien luominen
+Yht: | 27 |

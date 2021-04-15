@@ -8,11 +8,11 @@ class TestUserDatabase(unittest.TestCase):
 
     def test_search_user_finds_existing_user_correctly(self):
         returns = user_database.search_user("Adam")
-        self.assertEqual(returns, True)
+        self.assertEqual(returns, (1, "Adam"))
 
-    def test_search_nonexistent_user_returns_False_correctly(self):
+    def test_search_nonexistent_user_returns_None_correctly(self):
         returns = user_database.search_user("Eve")
-        self.assertEqual(returns, False)
+        self.assertEqual(returns, None)
 
     def test_add_user_adds_previously_nonexistent_user_correctly(self):
         returns = user_database.add_user("Eve")

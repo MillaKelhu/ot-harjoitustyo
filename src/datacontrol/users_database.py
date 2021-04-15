@@ -13,10 +13,7 @@ class UserDatabase:
     def search_user(self, username):
         user = self._db.execute("SELECT * FROM Users WHERE username=?", [username]).fetchone()
 
-        if user is not None:
-            return True
-        else:
-            return False
+        return user
 
     def add_user(self, username):
         user_exists = self.search_user(username)

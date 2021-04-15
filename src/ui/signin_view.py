@@ -1,5 +1,5 @@
 from tkinter import Tk, ttk, constants
-from functions.user_functions import user_functions
+from functions.cookbookapp_functions import cookbookapp_functions
 
 class SigninView:
     def __init__(self, root, handle_create_new_user):
@@ -42,7 +42,7 @@ class SigninView:
         new_username_data = self._new_username_entry.get()
 
         if len(new_username_data) > 0:
-            if user_functions.sign_in(new_username_data):
+            if cookbookapp_functions.sign_in(new_username_data):
                 self._handle_create_new_user()
         else:
             pass

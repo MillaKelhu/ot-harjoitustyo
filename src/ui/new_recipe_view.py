@@ -1,10 +1,11 @@
 from tkinter import Tk, ttk, constants, Text, Scrollbar
+from functions.cookbookapp_functions import cookbookapp_functions
 
 class NewRecipeView:
-    def __init__(self, root, handle_new_recipe):
+    def __init__(self, root, handle_return):
         self._root = root
         self._frame = None
-        self._handle_new_recipe = handle_new_recipe
+        self._handle_return = handle_return
         self._name_entry = None
         self._instructions_text = None
 
@@ -20,11 +21,11 @@ class NewRecipeView:
         name_label = ttk.Label(master=self._frame, text="Name:")
         self._name_entry = ttk.Entry(master=self._frame)
 
-        name_label.grid(row=1, column=0, sticky=(constants.E, constants.W), padx=5, pady=15)
-        self._name_entry.grid(row=1, column=1, sticky=(constants.E, constants.W), padx=5, pady=15)
+        name_label.grid(row=1, column=0, sticky=(constants.W),padx=5, pady=15)
+        self._name_entry.grid(row=1, column=1, padx=5, pady=15)
 
     def _initialize_instructions_field(self):
-        instructions_label = ttk.Label(master=self._frame, text="Ingredients:")
+        instructions_label = ttk.Label(master=self._frame, text="Instructions:")
         self._instructions_text = Text(master=self._frame)
 
         instructions_label.grid(row=2, column=0, sticky=(constants.E, constants.W), padx=5, pady=5)
@@ -39,11 +40,19 @@ class NewRecipeView:
             command=self._check_entries
         )
 
+        return_without_saving_button = ttk.Button(
+            master=self._frame,
+            text="Return without saving",
+            command=self._handle_return
+        )
+
         self._initialize_name_field()
 
         self._initialize_instructions_field()
 
-        create_new_recipe_button.grid(row=14, column=0, columnspan=2, padx=5, pady=5)
+        create_new_recipe_button.grid(row=14, column=0, columnspan=2, sticky=(constants.W), padx=5, pady=5)
+
+        return_without_saving_button.grid(row=14, column=1, columnspan=2, sticky=(constants.E), padx=5, pady=5)
 
         self._frame.grid_columnconfigure(0, weight=1, minsize=100)
 
@@ -52,6 +61,7 @@ class NewRecipeView:
         instructions_data = self._instructions_text.get(1.0, "end")
 
         if len(name_data) > 0 and len(instructions_data) > 0:
-            self._handle_new_recipe()
+            cookbookapp_functions.add_recipes(name_data, instructions_data)
+            self._handle_return()
         else:
             pass
