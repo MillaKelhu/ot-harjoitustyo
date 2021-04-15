@@ -16,7 +16,7 @@ Ainakin aluksi sovelluksessa on ainoastaan yhden tyyppisiä käyttäjiä, eli ns
 ### Perustason toiminnallisuudet
 
 #### Ennen kirjautumista
--[x] Uuden käyttäjätunnuksen luominen sovellukseen
+- [x] Uuden käyttäjätunnuksen luominen sovellukseen
   - [x] Käyttäjätunnuksen on oltava uniikki
   - [ ] Jos käyttäjätunnus ei ole uniikki, annetaan virheilmoitus
 - [x] Sovellukseen voi kirjautua em. tunnuksella
