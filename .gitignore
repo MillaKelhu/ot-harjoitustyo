@@ -3,6 +3,6 @@
 htmlcov
 __pycache__
 .vscode
-
 *.db
+data/database.sqlite
 
