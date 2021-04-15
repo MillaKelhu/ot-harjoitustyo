@@ -23,9 +23,9 @@ Ainakin aluksi sovelluksessa on ainoastaan yhden tyyppisiä käyttäjiä, eli ns
   - [ ] Jos tunnusta ei löydy sovelluksen tiedoista, annetaan virheilmoituksen
 
 #### Kirjautumisen jälkeen
-- [] Käyttäjä näkee luomansa reseptit
-  - [] Reseptit näkyvät ainoastaan ne luoneelle käyttäjälle
-- [] Käyttäjä voi luoda uuden reseptin
+- [x] Käyttäjä näkee luomansa reseptit
+  - [x] Reseptit näkyvät ainoastaan ne luoneelle käyttäjälle
+- [x] Käyttäjä voi luoda uuden reseptin
 - [x] Käyttäjä voi kirjautua ulos sovelluksesta
 
 ### Toiminnallisuuden jatkokehitys
