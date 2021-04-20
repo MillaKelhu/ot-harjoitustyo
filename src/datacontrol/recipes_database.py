@@ -36,5 +36,14 @@ class RecipesDatabase:
 
         self._db.commit()
 
+    def get_all_recipes(self):
+        recipes = self._db.execute(
+            "SELECT * FROM recipes").fetchall()
+
+        if recipes == []:
+            recipes = None
+
+        return recipes
+
 
 recipes_database = RecipesDatabase(get_database_connection())

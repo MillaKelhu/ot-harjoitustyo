@@ -22,3 +22,9 @@ class TestUserDatabase(unittest.TestCase):
     def test_add_user_prevents_user_duplicates(self):
         returns = user_database.add_user("Adam")
         self.assertEqual(returns, False)
+
+    def test_erase_all_users_works_correctly(self):
+        user_database.erase_all_users()
+        users = user_database.get_all_users()
+
+        self.assertEqual(users, None)

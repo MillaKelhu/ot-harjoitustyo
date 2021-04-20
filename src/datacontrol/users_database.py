@@ -28,5 +28,14 @@ class UserDatabase:
 
         self._db.commit()
 
+    def get_all_users(self):
+        users = self._db.execute(
+            "SELECT * FROM users").fetchall()
+
+        if users == []:
+            users = None
+
+        return users
+
 
 user_database = UserDatabase(get_database_connection())

@@ -41,3 +41,9 @@ class TestUserDatabase(unittest.TestCase):
     def test_search_users_recipes_returns_nonexistent_users_recipes_as_None(self):
         returns = recipes_database.search_users_recipes(3)
         self.assertEqual(returns, None)
+
+    def test_erase_all_recipes_works_correctly(self):
+        recipes_database.erase_all_recipes()
+        recipes = recipes_database.get_all_recipes()
+
+        self.assertEqual(recipes, None)
