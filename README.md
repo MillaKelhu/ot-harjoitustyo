@@ -13,10 +13,10 @@ Sovelluksen avulla on mahdollista pitää kirjaa omista resepteistä, ja sovellu
 ## Asennus
 
 1. Tarvittavat riippuvuudet asennetaan komennolla
-`<poetry install>`
+`poetry install`
 
 2. Alustustoimenpiteet suoritetaan komennolla
-`<poetry run invoke initialize-database>`
+`poetry run invoke initialize-database`
 
 3. Sovellus käynnistetään komennolla
-`<poetry run invoke start>`
+`poetry run invoke start`
