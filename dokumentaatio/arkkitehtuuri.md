@@ -8,3 +8,4 @@
 # Päätoiminnallisuudet
 
 ![](https://raw.githubusercontent.com/MillaKelhu/ot-harjoitustyo/master/dokumentaatio/kuvat/architecture_sequence_login.png)
+![](https://raw.githubusercontent.com/MillaKelhu/ot-harjoitustyo/master/dokumentaatio/kuvat/architecture_sequence_signin.png)
