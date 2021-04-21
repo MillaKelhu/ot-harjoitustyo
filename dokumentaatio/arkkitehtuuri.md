@@ -7,4 +7,4 @@
 
 # Päätoiminnallisuudet
 
-![](https://raw.githubusercontent.com/MillaKelhu/ot-harjoitustyo/master/dokumentaatio/kuvat/arkkitehtuuri_sekvenssi_kirjautuminen.png)
+![](https://raw.githubusercontent.com/MillaKelhu/ot-harjoitustyo/master/dokumentaatio/kuvat/architecture_sequence_login.png)
