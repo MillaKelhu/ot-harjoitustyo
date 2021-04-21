@@ -1,10 +1,10 @@
 # Arkkitehtuurikuvaus
 
-## Rakenne
+# Rakenne
 
 ![](https://raw.githubusercontent.com/MillaKelhu/ot-harjoitustyo/master/dokumentaatio/kuvat/ohte_package_diagram_1.png)
 
 
-## Päätoiminnallisuudet
+# Päätoiminnallisuudet
 
 ![](https://raw.githubusercontent.com/MillaKelhu/ot-harjoitustyo/master/dokumentaatio/kuvat/arkkitehtuuri_sekvenssi_kirjautuminen.png)
