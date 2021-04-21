@@ -6,18 +6,24 @@ class UserDatabase:
         self._db = connection
         self._db.isolation_level = None
 
-    def search_user(self, username):
-        user = self._db.execute(
-            "SELECT * FROM users WHERE username=?", [username]).fetchone()
+    def search_user(self, username, password=None):
+        if password:
+            user = self._db.execute(
+                "SELECT * FROM users WHERE username=? AND password=?", [
+                    username, password]
+            ).fetchone()
+        else:
+            user = self._db.execute(
+                "SELECT * FROM users WHERE username=?", [username]).fetchone()
 
         return user
 
-    def add_user(self, username):
+    def add_user(self, username, password):
         user_exists = self.search_user(username)
 
         if user_exists is None:
             self._db.execute(
-                "INSERT INTO users (username) VALUES (?)", [username])
+                "INSERT INTO users (username, password) VALUES (?, ?)", [username, password])
 
         return not bool(user_exists)
 

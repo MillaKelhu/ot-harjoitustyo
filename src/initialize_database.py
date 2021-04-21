@@ -14,7 +14,7 @@ def create_tables(connection):
     cursor = connection.cursor()
 
     cursor.execute('''CREATE TABLE IF NOT EXISTS users
-                    (id INTEGER PRIMARY KEY, username TEXT)''')
+                    (id INTEGER PRIMARY KEY, username TEXT, password TEXT)''')
     cursor.execute('''CREATE TABLE IF NOT EXISTS recipes
                     (id INTEGER PRIMARY KEY, user_id INTEGER, name TEXT, instructions TEXT)''')
 

@@ -13,8 +13,8 @@ class CookbookAppFunctions:
         self._users = user_database
         self._recipes = recipes_database
 
-    def log_in(self, username):
-        user = self._users.search_user(username)
+    def log_in(self, username, password):
+        user = self._users.search_user(username, password)
 
         if user:
             self._user = user
@@ -25,8 +25,8 @@ class CookbookAppFunctions:
         self._user = None
         return True
 
-    def sign_in(self, username):
-        user_added = self._users.add_user(username)
+    def sign_in(self, username, password):
+        user_added = self._users.add_user(username, password)
         return user_added
 
     def current_user(self):

@@ -18,9 +18,9 @@ Ainakin aluksi sovelluksessa on ainoastaan yhden tyyppisiä käyttäjiä, eli ns
 #### Ennen kirjautumista
 - [x] Uuden käyttäjätunnuksen luominen sovellukseen
   - [x] Käyttäjätunnuksen on oltava uniikki
-  - [ ] Jos käyttäjätunnus ei ole uniikki, annetaan virheilmoitus
+  - [x] Jos käyttäjätunnus ei ole uniikki, annetaan virheilmoitus
 - [x] Sovellukseen voi kirjautua em. tunnuksella
-  - [ ] Jos tunnusta ei löydy sovelluksen tiedoista, annetaan virheilmoituksen
+  - [x] Jos tunnusta ei löydy sovelluksen tiedoista, annetaan virheilmoituksen
 
 #### Kirjautumisen jälkeen
 - [x] Käyttäjä näkee luomansa reseptit
@@ -32,9 +32,9 @@ Ainakin aluksi sovelluksessa on ainoastaan yhden tyyppisiä käyttäjiä, eli ns
 Mahdollisuuksien mukaan sovellusta parannetaan esim. seuraavin toiminnallisuuksin:
 
 #### Ennen kirjautumista
-* Käyttäjän tulee luoda salasana uuden käyttäjätunnuksen luomisen yhteydessä
-* Salasanaa kysytään kirjautuessa
-  * Väärä tai puuttuva salasana aiheuttaa virheilmoituksen
+- [x] Käyttäjän tulee luoda salasana uuden käyttäjätunnuksen luomisen yhteydessä
+- [x] Salasanaa kysytään kirjautuessa
+  - [x] Väärä tai puuttuva salasana aiheuttaa virheilmoituksen
 
 #### Kirjautumisen jälkeen
 * Reseptien muokkaus

@@ -15,4 +15,5 @@ Päivämäärä | Aika (tunneissa) | Mitä tehty
 15.4. | 2 | Tietokantayhteyden muokkaaminen järkevämmäksi
 15.4. | 1 | Pylintin käyttöönotto ja koodin laadun korjaus
 20.4. | 1 | Tietokantayhteyden muokkaaminen järkevämmäksi
-Yht: | 31 |
+21.4. | 2 | Salasanan lisääminen, lisätestien toteuttaminen
+Yht: | 33 |
