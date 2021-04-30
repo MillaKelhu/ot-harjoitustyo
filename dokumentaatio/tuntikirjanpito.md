@@ -22,5 +22,5 @@ Päivämäärä | Aika (tunneissa) | Mitä tehty
 30.4. | 1 | Reseptin muokkaamisen toteutus ui:n osalta
 30.4. | 1 | Reseptin poistamisen toteutus tietokannan ja sovelluslogiikan osalta
 30.4. | 1 | Lisää testien kirjoittamista
-30.4. | 2 | Reseptin poistamisen toteutus ui:n osalta, lisää tutustumista TkInteriin
-Yht: | 42 |
+30.4. | 3 | Reseptin poistamisen toteutus ui:n osalta, lisää tutustumista TkInteriin
+Yht: | 43 |

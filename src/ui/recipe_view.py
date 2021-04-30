@@ -1,15 +1,16 @@
 from tkinter import Tk, ttk, constants, Toplevel
 from functions.cookbookapp_functions import cookbookapp_functions
+from ui.confirmation_view import ConfirmationWindow
 
 
 class RecipeView:
-    def __init__(self, root, handle_return, handle_modify):
+    def __init__(self, root, handle_return, handle_modify, handle_delete):
         self._root = root
         self._frame = None
         self._handle_return = handle_return
         self._handle_modify = handle_modify
+        self._handle_delete = handle_delete
         self._recipe = cookbookapp_functions.get_chosen_recipe()
-        self._confirmation_window = None
 
         self._initialize()
 
@@ -47,7 +48,7 @@ class RecipeView:
         delete_button = ttk.Button(
             master=self._frame,
             text="Delete recipe",
-            command=self._show_confirmation_window
+            command=self._handle_delete
         )
 
         self._initialize_recipe()
@@ -59,39 +60,4 @@ class RecipeView:
         delete_button.grid(
             row=14, column=2, columnspan=1,sticky=(constants.E), padx=5, pady=5)
 
-        self._initialize_confirmation_window()
-        self._hide_confirmation_window()
-
-    def _handle_delete(self):
-        cookbookapp_functions.delete_chosen_recipe()
-        self._hide_confirmation_window()
-        self._handle_return()
-
-    def _initialize_confirmation_window(self):
-        self._confirmation_window = Toplevel()
-        self._confirmation_window.title("")
-        message_label = ttk.Label(self._confirmation_window, text="Are you sure you want to delete this recipe?")
-        
-        cancel_button = ttk.Button(
-            master=self._confirmation_window,
-            text="Cancel",
-            command=self._hide_confirmation_window
-        )
-
-        delete_button = ttk.Button(
-            master=self._confirmation_window,
-            text="Delete",
-            command=self._handle_delete
-        )
-
-        message_label.grid(row=0, column=0, columnspan=2, padx=5, pady=5)
-
-        cancel_button.grid(row=1, column=0, padx=5, pady=5)
-        delete_button.grid(row=1, column=1, padx=5, pady=5)
-
-    def _show_confirmation_window(self):
-        self._confirmation_window.deiconify()
-
-    def _hide_confirmation_window(self):
-            self._confirmation_window.withdraw()
-
+    

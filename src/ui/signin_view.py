@@ -3,10 +3,10 @@ from functions.cookbookapp_functions import cookbookapp_functions
 
 
 class SigninView:
-    def __init__(self, root, handle_create_new_user):
+    def __init__(self, root, handle_return):
         self._root = root
         self._frame = None
-        self._handle_create_new_user = handle_create_new_user
+        self._handle_return = handle_return
         self._new_username_entry = None
         self._password_entry = None
         self._error_label = None
@@ -47,11 +47,19 @@ class SigninView:
             command=self._check_new_username
         )
 
+        self._cancel_button = ttk.Button(
+            master=self._frame,
+            text="Cancel",
+            command=self._handle_return
+        )
+
         self._initialize_new_user_entry()
         self._initialize_password_entry()
 
         self._new_user_button.grid(
             row=4, column=0, columnspan=2, padx=5, pady=5)
+        self._cancel_button.grid(
+            row=5, column=0, columnspan=2, padx=5, pady=5)
 
         self._hide_error_label()
 
@@ -64,7 +72,7 @@ class SigninView:
         if len(new_username_data) > 0:
             if len(password_data) > 0:
                 if cookbookapp_functions.sign_in(new_username_data, password_data):
-                    self._handle_create_new_user()
+                    self._handle_return()
                 else:
                     self._show_error_label("Error: username is taken")
             else:
