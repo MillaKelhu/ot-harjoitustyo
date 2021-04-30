@@ -1,5 +1,7 @@
 #  Reseptikirja-app
 
+[Uusin release](https://github.com/MillaKelhu/ot-harjoitustyo/releases/tag/viikko6)
+
 Sovelluksen avulla on mahdollista pitää kirjaa omista resepteistä, ja sovelluksessa voi olla useampi kirjautunut käyttäjä. Tällä hetkellä sovellukseen on mahdollista luoda uusi käyttäjä, kirjautua sillä sisään, ja kirjautua ulos.
 
 ## Dokumentaatio
@@ -20,5 +22,3 @@ Sovelluksen avulla on mahdollista pitää kirjaa omista resepteistä, ja sovellu
 
 3. Sovellus käynnistetään komennolla
 `poetry run invoke start`
-
-[## Uusin release](https://github.com/MillaKelhu/ot-harjoitustyo/releases/tag/viikko6)
