@@ -20,3 +20,5 @@ Sovelluksen avulla on mahdollista pitää kirjaa omista resepteistä, ja sovellu
 
 3. Sovellus käynnistetään komennolla
 `poetry run invoke start`
+
+[## Uusin release](https://github.com/MillaKelhu/ot-harjoitustyo/releases/tag/viikko6)
