@@ -39,14 +39,14 @@ Mahdollisuuksien mukaan sovellusta parannetaan esim. seuraavin toiminnallisuuksi
 #### Kirjautumisen jälkeen
 - [x] Reseptien muokkaus
 - [x] Reseptien poisto
-- [] Käyttäjä pystyy luomaan eri kategorioita, esim. jälkiruoka, vegaani, pääsiäinen, tms. joihin reseptit voi luokitella 
-- [] Reseptien haku eri hakuperusteilla:
+- [ ] Käyttäjä pystyy luomaan eri kategorioita, esim. jälkiruoka, vegaani, pääsiäinen, tms. joihin reseptit voi luokitella 
+- [ ] Reseptien haku eri hakuperusteilla:
   * Nimi
   * Raaka-aine
   * Em. kategoria
-- [] Kuvien lisääminen resepteihin
-- [] Käyttäjä voi merkitä muistiin, mitä reseptejä on kokeillut ja tarkastella niitä myöhemmin
-- [] Käyttäjä voi jakaa luomiaan reseptejä muille käyttäjille
+- [ ] Kuvien lisääminen resepteihin
+- [ ] Käyttäjä voi merkitä muistiin, mitä reseptejä on kokeillut ja tarkastella niitä myöhemmin
+- [ ] Käyttäjä voi jakaa luomiaan reseptejä muille käyttäjille
 - [] Ravintoaine- ja kalorilaskuri
 - [] Reseptin ainesosien määrien säätäminen annoksien mukaan
 - [] Käyttäjätunnusta tai salasanaa voi muuttaa
