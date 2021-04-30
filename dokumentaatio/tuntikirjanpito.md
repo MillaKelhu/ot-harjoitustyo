@@ -17,4 +17,10 @@ Päivämäärä | Aika (tunneissa) | Mitä tehty
 20.4. | 1 | Tietokantayhteyden muokkaaminen järkevämmäksi
 21.4. | 2 | Salasanan lisääminen, lisätestien toteuttaminen
 21.4. | 1 | Sekvenssikaavioiden teko
-Yht: | 34 |
+29.4. | 1 | Kirjautumisen debuggausta
+29.4. | 2 | Reseptin muokkaamisen toteutus tietokannan ja sovelluslogiikan osalta
+30.4. | 1 | Reseptin muokkaamisen toteutus ui:n osalta
+30.4. | 1 | Reseptin poistamisen toteutus tietokannan ja sovelluslogiikan osalta
+30.4. | 1 | Lisää testien kirjoittamista
+30.4. | 2 | Reseptin poistamisen toteutus ui:n osalta, lisää tutustumista TkInteriin
+Yht: | 42 |

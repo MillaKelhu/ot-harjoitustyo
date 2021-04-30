@@ -26,7 +26,7 @@ class LoginView:
 
         username_label.grid(row=1, column=0, sticky=(
             constants.E, constants.W), padx=5, pady=15)
-        self._username_entry.grid(row=1, column=1, sticky=(
+        self._username_entry.grid(row=1, column=1, columnspan=2, sticky=(
             constants.E, constants.W), padx=5, pady=15)
 
     def _initialize_password_entry(self):
@@ -35,7 +35,7 @@ class LoginView:
 
         password_label.grid(row=2, column=0, sticky=(
             constants.E, constants.W), padx=5, pady=15)
-        self._password_entry.grid(row=2, column=1, sticky=(
+        self._password_entry.grid(row=2, column=1, columnspan=2, sticky=(
             constants.E, constants.W), padx=5, pady=15)
 
     def _initialize(self):
@@ -56,8 +56,8 @@ class LoginView:
         self._initialize_username_entry()
         self._initialize_password_entry()
 
-        login_button.grid(row=4, column=0, columnspan=2, padx=5, pady=5)
-        signin_button.grid(row=5, column=0, columnspan=2, padx=5, pady=5)
+        login_button.grid(row=4, column=0, columnspan=3, padx=5, pady=5)
+        signin_button.grid(row=5, column=0, columnspan=3, padx=5, pady=5)
 
         self._hide_error_label()
 

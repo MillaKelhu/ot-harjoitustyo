@@ -4,6 +4,7 @@ from ui.signin_view import SigninView
 from ui.book_view import BookView
 from ui.new_recipe_view import NewRecipeView
 from ui.recipe_view import RecipeView
+from ui.modify_recipe_view import ModifyRecipeView
 
 
 class UI:
@@ -68,6 +69,17 @@ class UI:
         self._destroy_current()
 
         self._frame = RecipeView(
+            self._root,
+            self._show_book,
+            self._show_modify_recipe
+        )
+
+        self._frame.pack()
+
+    def _show_modify_recipe(self):
+        self._destroy_current()
+
+        self._frame = ModifyRecipeView(
             self._root,
             self._show_book
         )

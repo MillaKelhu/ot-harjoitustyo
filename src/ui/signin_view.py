@@ -51,7 +51,7 @@ class SigninView:
         self._initialize_password_entry()
 
         self._new_user_button.grid(
-            row=3, column=0, columnspan=2, padx=5, pady=5)
+            row=4, column=0, columnspan=2, padx=5, pady=5)
 
         self._hide_error_label()
 
@@ -78,7 +78,7 @@ class SigninView:
 
         self._error_label = ttk.Label(master=self._frame, text=message)
 
-        self._error_label.grid(row=2, column=0, columnspan=2, padx=5, pady=5)
+        self._error_label.grid(row=3, column=0, columnspan=2, padx=5, pady=5)
 
     def _hide_error_label(self):
         if self._error_label:

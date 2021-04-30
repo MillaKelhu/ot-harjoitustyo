@@ -58,6 +58,30 @@ class FakeRecipesDatabase:
     def erase_all_recipes(self):
         self._recipes = []
 
+    def modify_recipe(self, user_id, name, new_instructions):
+        recipe = self.search_recipe(user_id, name)
+
+        if recipe:
+            for recipes in self._recipes:
+                if recipes[1] == user_id and recipes[2] == name:
+                    recipes[3] == new_instructions
+                    break
+
+            recipe = self.search_recipe(user_id, name)
+
+        return recipe
+
+    def delete_recipe(self, user_id, name):
+        recipe = self.search_recipe(user_id, name)
+
+        if recipe:
+            for recipes in self._recipes:
+                if recipes[1] == user_id and recipes[2] == name:
+                    self._recipes.remove(recipes)
+                    break
+
+        return bool(recipe)
+
 
 class TestCookBookAppFunctions(unittest.TestCase):
     def setUp(self):
@@ -83,6 +107,10 @@ class TestCookBookAppFunctions(unittest.TestCase):
 
     def test_log_returns_false_with_wrong_password(self):
         returns = self.cookbookapp_functions.log_in("Leon", "456")
+        self.assertEqual(returns, False)
+
+    def test_log_returns_false_with_empty_password(self):
+        returns = self.cookbookapp_functions.log_in("Leon", "")
         self.assertEqual(returns, False)
 
     def test_log_out_works_correctly(self):
@@ -141,4 +169,17 @@ class TestCookBookAppFunctions(unittest.TestCase):
 
     def test_no_chosen_recipe_returns_True(self):
         returns = self.cookbookapp_functions.no_chosen_recipe()
+        self.assertEqual(returns, True)
+
+    def test_modify_chosen_recipe_works(self):
+        self.cookbookapp_functions.log_in("Leon", "123")
+        self.cookbookapp_functions.set_chosen_recipe("Glass of milk")
+        returns = self.cookbookapp_functions.modify_chosen_recipe(
+            "Pour milk in a glass. Drink.")
+        self.assertEqual(returns, True)
+
+    def test_delete_chosen_recipe_works(self):
+        self.cookbookapp_functions.log_in("Leon", "123")
+        self.cookbookapp_functions.set_chosen_recipe("Glass of milk")
+        returns = self.cookbookapp_functions.delete_chosen_recipe()
         self.assertEqual(returns, True)

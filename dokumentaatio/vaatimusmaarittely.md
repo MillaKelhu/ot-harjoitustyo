@@ -37,18 +37,18 @@ Mahdollisuuksien mukaan sovellusta parannetaan esim. seuraavin toiminnallisuuksi
   - [x] Väärä tai puuttuva salasana aiheuttaa virheilmoituksen
 
 #### Kirjautumisen jälkeen
-* Reseptien muokkaus
-* Reseptien poisto
-* Käyttäjä pystyy luomaan eri kategorioita, esim. jälkiruoka, vegaani, pääsiäinen, tms. joihin reseptit voi luokitella 
-* Reseptien haku eri hakuperusteilla:
+- [x] Reseptien muokkaus
+- [x] Reseptien poisto
+- [] Käyttäjä pystyy luomaan eri kategorioita, esim. jälkiruoka, vegaani, pääsiäinen, tms. joihin reseptit voi luokitella 
+- [] Reseptien haku eri hakuperusteilla:
   * Nimi
   * Raaka-aine
   * Em. kategoria
-* Kuvien lisääminen resepteihin
-* Käyttäjä voi merkitä muistiin, mitä reseptejä on kokeillut ja tarkastella niitä myöhemmin
-* Käyttäjä voi jakaa luomiaan reseptejä muille käyttäjille
-* Ravintoaine- ja kalorilaskuri
-* Reseptin ainesosien määrien säätäminen annoksien mukaan
-* Käyttäjätunnusta tai salasanaa voi muuttaa
-* Käyttäjätunnuksen voi poistaa
-* Sisarsovellus: Ruokakaappisovellus, jonka voi linkittää tämän yhteyteen, ja sen perusteella käyttäjälle voidaan suositella reseptejä, joihin on raaka-aineet valmiina, tai sen perusteella minkä raaka-aineen käyttö on kiireellistä, yms.
+- [] Kuvien lisääminen resepteihin
+- [] Käyttäjä voi merkitä muistiin, mitä reseptejä on kokeillut ja tarkastella niitä myöhemmin
+- [] Käyttäjä voi jakaa luomiaan reseptejä muille käyttäjille
+- [] Ravintoaine- ja kalorilaskuri
+- [] Reseptin ainesosien määrien säätäminen annoksien mukaan
+- [] Käyttäjätunnusta tai salasanaa voi muuttaa
+- [] Käyttäjätunnuksen voi poistaa
+- [] Sisarsovellus: Ruokakaappisovellus, jonka voi linkittää tämän yhteyteen, ja sen perusteella käyttäjälle voidaan suositella reseptejä, joihin on raaka-aineet valmiina, tai sen perusteella minkä raaka-aineen käyttö on kiireellistä, yms.

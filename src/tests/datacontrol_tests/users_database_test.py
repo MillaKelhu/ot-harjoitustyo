@@ -27,6 +27,11 @@ class TestUserDatabase(unittest.TestCase):
         returns = user_database.add_user("Adam", "456")
         self.assertEqual(returns, False)
 
+    def test_get_all_users_works_correctly(self):
+        users = user_database.get_all_users()
+
+        self.assertEqual(users, [(1, "Adam", "123")])
+
     def test_erase_all_users_works_correctly(self):
         user_database.erase_all_users()
         users = user_database.get_all_users()

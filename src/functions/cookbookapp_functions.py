@@ -14,10 +14,11 @@ class CookbookAppFunctions:
         self._recipes = recipes_database
 
     def log_in(self, username, password):
-        user = self._users.search_user(username, password)
+        if password:
+            user = self._users.search_user(username, password)
 
-        if user:
-            self._user = user
+            if user:
+                self._user = user
 
         return bool(self._user)
 
@@ -52,6 +53,17 @@ class CookbookAppFunctions:
     def no_chosen_recipe(self):
         self._chosen_recipe = None
         return True
+
+    def modify_chosen_recipe(self, instructions):
+        self._recipes.modify_recipe(
+            self._user[0], self._chosen_recipe[2], instructions)
+
+        return bool(self._chosen_recipe)
+
+    def delete_chosen_recipe(self):
+        self._recipes.delete_recipe(self._user[0], self._chosen_recipe[2])
+
+        return bool(self._chosen_recipe)
 
 
 cookbookapp_functions = CookbookAppFunctions()

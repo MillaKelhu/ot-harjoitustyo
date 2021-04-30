@@ -45,5 +45,25 @@ class RecipesDatabase:
 
         return recipes
 
+    def modify_recipe(self, user_id, name, new_instructions):
+        recipe = self.search_recipe(user_id, name)
+
+        if recipe:
+            self._db.execute("UPDATE recipes SET instructions=? WHERE user_id=? AND name=?", [
+                             new_instructions, user_id, name])
+
+            recipe = self.search_recipe(user_id, name)
+
+        return recipe
+
+    def delete_recipe(self, user_id, name):
+        recipe = self.search_recipe(user_id, name)
+
+        if recipe:
+            self._db.execute("DELETE FROM recipes WHERE user_id=? AND name=?", [
+                user_id, name])
+
+        return bool(recipe)
+
 
 recipes_database = RecipesDatabase(get_database_connection())
