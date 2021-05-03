@@ -15,10 +15,6 @@ class TestUserDatabase(unittest.TestCase):
         self.assertEqual(returns, (1, 1, "Sandwich",
                          "Take a bread and butter it."))
 
-    def test_search_recipe_nonexistent_id_and_name_returns_None(self):
-        returns = recipes_database.search_recipe(3, "Pasta")
-        self.assertEqual(returns, None)
-
     def test_search_recipe_nonexistent_recipe_returns_None(self):
         returns = recipes_database.search_recipe(1, "Salad")
         self.assertEqual(returns, None)
