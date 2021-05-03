@@ -27,4 +27,5 @@ Päivämäärä | Aika (tunneissa) | Mitä tehty
 3.5. | 1 | Koodin laadun korjaus Pylintin avulla
 3.5. | 2 | Testikattavuuden paikkailua
 3.5. | 2 | Arkkitehtuurikuvauksen päivitys
-Yht: | 52 |
+3.5. | 1 | Käyttöohjeen teko
+Yht: | 53 |
