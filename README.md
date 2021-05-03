@@ -10,6 +10,8 @@ Sovelluksen avulla on mahdollista pitää kirjaa omista resepteistä, ja sovellu
 
 [Tuntikirjanpito](https://github.com/MillaKelhu/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
+[Käyttöohje](https://github.com/MillaKelhu/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
+
 [Arkkitehtuuri](https://github.com/MillaKelhu/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
 ## Asennus
