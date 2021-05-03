@@ -1,6 +1,6 @@
 #  Reseptikirja-app
 
-[Uusin release](https://github.com/MillaKelhu/ot-harjoitustyo/releases/tag/viikko6)
+[Uusin release](https://github.com/MillaKelhu/ot-harjoitustyo/releases/latest)
 
 Sovelluksen avulla on mahdollista pitää kirjaa omista resepteistä, ja sovelluksessa voi olla useampi kirjautunut käyttäjä. Tällä hetkellä sovellukseen on mahdollista luoda uusi käyttäjä, kirjautua sillä sisään, ja kirjautua ulos.
 
