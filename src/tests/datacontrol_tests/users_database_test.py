@@ -15,6 +15,10 @@ class TestUserDatabase(unittest.TestCase):
         returns = user_database.search_user("Adam", "123")
         self.assertEqual(returns, (1, "Adam", "123"))
 
+    def test_search_user_returns_None_with_wrong_password(self):
+        returns = user_database.search_user("Adam", "456")
+        self.assertEqual(returns, None)
+
     def test_search_nonexistent_user_returns_None_correctly(self):
         returns = user_database.search_user("Eve")
         self.assertEqual(returns, None)

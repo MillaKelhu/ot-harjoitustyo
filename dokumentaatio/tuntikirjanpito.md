@@ -23,4 +23,7 @@ Päivämäärä | Aika (tunneissa) | Mitä tehty
 30.4. | 1 | Reseptin poistamisen toteutus tietokannan ja sovelluslogiikan osalta
 30.4. | 1 | Lisää testien kirjoittamista
 30.4. | 3 | Reseptin poistamisen toteutus ui:n osalta, lisää tutustumista TkInteriin
-Yht: | 43 |
+3.5. | 4 | Docstringin käyttöönotto
+3.5. | 1 | Koodin laadun korjaus Pylintin avulla
+3.5. | 2 | Testikattavuuden paikkailua
+Yht: | 50 |

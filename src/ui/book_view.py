@@ -3,7 +3,20 @@ from functions.cookbookapp_functions import cookbookapp_functions
 
 
 class BookView:
+    """Class that initializes cookbook -window of ui.
+    """
+
     def __init__(self, root, handle_logout, handle_new_recipe, handle_recipe):
+        """Constructor of class that keeps track of frame and necessary functions to change window.
+        Cookbook -window is initialized in class constructor.
+
+        Args:
+            root (Tk): The root in class Tk() that is required to initialize a window.
+            handle_logout (function): Function _show_login() of class UI.
+            handle_new_recipe (function): Function _show_new_recipe() of class UI.
+            handle_recipe (function): Function _show_recipe() of class UI.
+        """
+
         self._root = root
         self._frame = None
         self._handle_logout = handle_logout
@@ -20,10 +33,16 @@ class BookView:
         self._frame.destroy()
 
     def _handler_logout(self):
+        """Switches window to Log in -window after logging out.
+        """
+
         cookbookapp_functions.log_out()
         self._handle_logout()
 
     def _initialize_book_name_label(self):
+        """Constructs the name of the cookbook according to who is logged in.
+        """
+
         user = cookbookapp_functions.current_user()[1]
 
         book_name_label = ttk.Label(
@@ -33,10 +52,21 @@ class BookView:
             constants.E, constants.W), padx=5, pady=15)
 
     def _handler_recipe(self, recipe_name):
+        """Switches window to recipe window according to the chosen recipe.
+
+        Args:
+            recipe_name (string): The name of the recipe.
+        """
+
         cookbookapp_functions.set_chosen_recipe(recipe_name)
         self._handle_recipe()
 
     def _initialize_recipe_buttons(self):
+        """Constructs buttons that display a recipe's name. 
+        The buttons have the function to set the variable _chosen_recipe in class CookbookAppFunctions,
+        and change the view into RecipeView().
+        """
+
         recipes = cookbookapp_functions.users_recipes()
 
         if recipes is not None:
@@ -54,6 +84,9 @@ class BookView:
                                    sticky=(constants.E, constants.W), padx=5, pady=5)
 
     def _initialize(self):
+        """Initializes the cookbook -window with necessary elements.
+        """
+
         self._frame = ttk.Frame(master=self._root)
 
         self._initialize_book_name_label()

@@ -2,6 +2,12 @@ from database_connection import get_database_connection
 
 
 def drop_tables(connection):
+    """Deletes existing data tables in database.
+
+    Args:
+        connection (Connection): Connection to SQL-database.
+    """
+
     cursor = connection.cursor()
 
     cursor.execute("DROP TABLE IF EXISTS users")
@@ -11,6 +17,12 @@ def drop_tables(connection):
 
 
 def create_tables(connection):
+    """Creates tables users and recipes into database.
+
+    Args:
+        connection (Connection): Connection to SQL-database.
+    """
+
     cursor = connection.cursor()
 
     cursor.execute('''CREATE TABLE IF NOT EXISTS users
@@ -22,6 +34,10 @@ def create_tables(connection):
 
 
 def initialize_database():
+    """Initializes the database by establishing a connection
+    to SQL-database, and then creating new data tables.
+    """
+
     connection = get_database_connection()
 
     drop_tables(connection)

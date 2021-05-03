@@ -3,7 +3,18 @@ from functions.cookbookapp_functions import cookbookapp_functions
 
 
 class SigninView:
+    """Class that initializes sign in -window of ui.
+    """
+
     def __init__(self, root, handle_return):
+        """Constructor of class that keeps track of the frame, new username- and password entries, error labels, and necessary function to change the window.
+        Sign in -window is intialized in class constructor.
+
+        Args:
+            root (Tk): The root in class Tk() that is required to initialize a window.
+            handle_return (function): Function _show_login() of class UI.
+        """
+
         self._root = root
         self._frame = None
         self._handle_return = handle_return
@@ -20,6 +31,9 @@ class SigninView:
         self._frame.destroy()
 
     def _initialize_new_user_entry(self):
+        """Constructs a label and entry where the user can input a username for a new user profile.
+        """
+
         new_username_label = ttk.Label(
             master=self._frame, text="New username:")
         self._new_username_entry = ttk.Entry(master=self._frame)
@@ -30,6 +44,9 @@ class SigninView:
             constants.E, constants.W), padx=5, pady=15)
 
     def _initialize_password_entry(self):
+        """Constructs a label and entry where the user can input a password for a new user profile.
+        """
+
         password_label = ttk.Label(master=self._frame, text="Password:")
         self._password_entry = ttk.Entry(master=self._frame, show="*")
 
@@ -39,6 +56,9 @@ class SigninView:
             constants.E, constants.W), padx=5, pady=15)
 
     def _initialize(self):
+        """Initializes the sign in -window with the necessary elements.
+        """
+
         self._frame = ttk.Frame(master=self._root)
 
         self._new_user_button = ttk.Button(
@@ -66,6 +86,10 @@ class SigninView:
         self._frame.grid_columnconfigure(0, weight=1, minsize=100)
 
     def _check_new_username(self):
+        """Checks length of input and uses function sign_in() from class CookbookAppFunctions to either change the frame into LoginView()
+        or display an error label.
+        """
+
         new_username_data = self._new_username_entry.get()
         password_data = str(self._password_entry.get())
 
@@ -81,6 +105,11 @@ class SigninView:
             self._show_error_label("Error: username must be longer")
 
     def _show_error_label(self, message):
+        """Initializes an error label. As there can be several error labels, the function first hides any error labels that already exist.
+
+        Args:
+            message (string): A message of the error label.
+        """
 
         self._hide_error_label()
 
@@ -89,5 +118,8 @@ class SigninView:
         self._error_label.grid(row=3, column=0, columnspan=2, padx=5, pady=5)
 
     def _hide_error_label(self):
+        """Hides an existing error label without destroying it.
+        """
+
         if self._error_label:
             self._error_label.grid_remove()

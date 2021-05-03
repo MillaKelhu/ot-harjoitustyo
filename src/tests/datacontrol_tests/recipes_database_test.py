@@ -15,6 +15,10 @@ class TestUserDatabase(unittest.TestCase):
         self.assertEqual(returns, (1, 1, "Sandwich",
                          "Take a bread and butter it."))
 
+    def test_search_recipe_nonexistent_id_and_name_returns_None(self):
+        returns = recipes_database.search_recipe(3, "Pasta")
+        self.assertEqual(returns, None)
+
     def test_search_recipe_nonexistent_recipe_returns_None(self):
         returns = recipes_database.search_recipe(1, "Salad")
         self.assertEqual(returns, None)
@@ -28,7 +32,12 @@ class TestUserDatabase(unittest.TestCase):
             2, "Salad", "Wash a salad and put its leaves in a bowl.")
         self.assertEqual(returns, True)
 
-    def test_add_recipe_prevents_duplicates(self):
+    def test_add_recipe_users_can_add_same_recipes(self):
+        returns = recipes_database.add_recipe(
+            2, "Sandwich", "Take a bread and butter it.")
+        self.assertEqual(returns, True)
+
+    def test_add_recipe_prevents_duplicate_names(self):
         returns = recipes_database.add_recipe(
             1, "Sandwich", "Take a bread, butter it, and put a slice of cheese on it.")
         self.assertEqual(returns, False)
@@ -67,6 +76,12 @@ class TestUserDatabase(unittest.TestCase):
 
         self.assertEqual(returns, None)
 
+    def test_modify_recipe_returns_None_with_nonexisting_user(self):
+        returns = recipes_database.modify_recipe(
+            3, "Noodles", "Put on some cup noodles")
+
+        self.assertEqual(returns, None)
+
     def test_delete_recipe_works_correctly(self):
         returns = recipes_database.delete_recipe(1, "Sandwich")
 
@@ -74,5 +89,10 @@ class TestUserDatabase(unittest.TestCase):
 
     def test_delete_recipe_returns_False_with_nonexisting_recipe(self):
         returns = recipes_database.delete_recipe(1, "Noodles")
+
+        self.assertEqual(returns, False)
+
+    def test_delete_recipe_returns_False_with_nonexisting_user(self):
+        returns = recipes_database.delete_recipe(3, "Sandwich")
 
         self.assertEqual(returns, False)

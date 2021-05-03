@@ -3,6 +3,9 @@ from ui.ui_view import UI
 
 
 def main():
+    """Establishes the ui and runs the app.
+    """
+
     window = Tk()
     window.title("Cookbook app")
 

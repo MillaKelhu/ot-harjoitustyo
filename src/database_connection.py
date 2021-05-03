@@ -13,4 +13,11 @@ connection = sqlite3.connect(os.path.join(
 
 
 def get_database_connection():
+    """Returns the necessary connection to the correct SQL-database.
+    While testing, the database is test-database.
+
+    Returns:
+        Connection: connection to SQL-database
+    """
+
     return connection
