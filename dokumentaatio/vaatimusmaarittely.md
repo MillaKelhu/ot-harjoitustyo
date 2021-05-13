@@ -16,39 +16,21 @@ Ainakin aluksi sovelluksessa on ainoastaan yhden tyyppisiä käyttäjiä, eli ns
 ### Perustason toiminnallisuudet
 
 #### Ennen kirjautumista
-- [x] Uuden käyttäjätunnuksen luominen sovellukseen
-  - [x] Käyttäjätunnuksen on oltava uniikki
-  - [x] Jos käyttäjätunnus ei ole uniikki, annetaan virheilmoitus
-- [x] Sovellukseen voi kirjautua em. tunnuksella
-  - [x] Jos tunnusta ei löydy sovelluksen tiedoista, annetaan virheilmoituksen
+* Uuden käyttäjätilin luominen sovellukseen. Käyttäjätili sisältää käyttäjänimen ja salasanan.
+  * Käyttäjänimen on oltava uniikki, muuten annetaan virheilmoitus.
+  * Sekä käyttäjänimen että salasanan on myös oltava 1-99 merkkiä pitkä, muuten annetaan virheilmoitus.
+* Sovellukseen voi kirjautua em. nimellä ja salasanalla.
+  * Jos käyttäjänimi tai salasana ovat virheelliset, annetaan virheilmoitus eikä käyttäjää päästetä sisään.
 
 #### Kirjautumisen jälkeen
-- [x] Käyttäjä näkee luomansa reseptit
-  - [x] Reseptit näkyvät ainoastaan ne luoneelle käyttäjälle
-- [x] Käyttäjä voi luoda uuden reseptin
-- [x] Käyttäjä voi kirjautua ulos sovelluksesta
-
-### Toiminnallisuuden jatkokehitys
-Mahdollisuuksien mukaan sovellusta parannetaan esim. seuraavin toiminnallisuuksin:
-
-#### Ennen kirjautumista
-- [x] Käyttäjän tulee luoda salasana uuden käyttäjätunnuksen luomisen yhteydessä
-- [x] Salasanaa kysytään kirjautuessa
-  - [x] Väärä tai puuttuva salasana aiheuttaa virheilmoituksen
-
-#### Kirjautumisen jälkeen
-- [x] Reseptien muokkaus
-- [x] Reseptien poisto
-- [ ] Käyttäjä pystyy luomaan eri kategorioita, esim. jälkiruoka, vegaani, pääsiäinen, tms. joihin reseptit voi luokitella 
-- [x] Reseptien haku eri hakuperusteilla:
-  * Nimi
-  * Raaka-aine
-  * Em. kategoria
-- [ ] Kuvien lisääminen resepteihin
-- [ ] Käyttäjä voi merkitä muistiin, mitä reseptejä on kokeillut ja tarkastella niitä myöhemmin
-- [ ] Käyttäjä voi jakaa luomiaan reseptejä muille käyttäjille
-- [ ] Ravintoaine- ja kalorilaskuri
-- [ ] Reseptin ainesosien määrien säätäminen annoksien mukaan
-- [ ] Käyttäjätunnusta tai salasanaa voi muuttaa
-- [ ] Käyttäjätunnuksen voi poistaa
-- [ ] Sisarsovellus: Ruokakaappisovellus, jonka voi linkittää tämän yhteyteen, ja sen perusteella käyttäjälle voidaan suositella reseptejä, joihin on raaka-aineet valmiina, tai sen perusteella minkä raaka-aineen käyttö on kiireellistä, yms.
+* Käyttäjä näkee luomansa reseptit.
+  * Reseptit näkyvät ainoastaan ne luoneelle käyttäjälle
+  * Näkyviä reseptejä voi filtteröidä. Tällöin näkyvillä ovat vain ne käyttäjän reseptit, joiden nimessä tai sisällössä on käyttäjän antama hakusana.
+* Käyttäjä voi luoda uuden reseptin
+  * Reseptin nimen on oltava käyttäjän omien reseptien joukossa uniikki ja 1-99 merkkiä pitkä, muuten annetaan virheilmoitus.
+  * Reseptin sisällön on oltava 1-5000 merkkiä pitkä, muuten annetaan virheilmoitus.
+* Käyttäjä voi muokata luomiaan reseptejä.
+  * Reseptin muokatun sisällön on oltava 1-5000 merkkiä pitkä, muuten annetaan virheilmoitus.
+* Käyttäjä voi poistaa luomiaan reseptejä.
+  * Käyttäjän on erikseen vaihvistettava poisto ikävien huolimattomuusvirheiden minimoimiseksi.
+* Käyttäjä voi kirjautua ulos sovelluksesta
