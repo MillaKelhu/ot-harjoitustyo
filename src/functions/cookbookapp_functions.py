@@ -85,15 +85,19 @@ class CookbookAppFunctions:
 
         return self._user
 
-    def users_recipes(self):
+    def users_recipes(self, keyword=None):
         """Returns all recipes in sql data table recipes where user id is that of variable _user's.
+        
+        Args:
+            keyword (string, default None): A string variable used to filter the search results.
+            If none are given, the query returns all user's recipes.
 
         Returns:
             list: List of tuples. Each tuple contains
             the recipe's id, user's id, recipe name, and instructions.
         """
 
-        recipes = self._recipes.search_users_recipes(self._user[0])
+        recipes = self._recipes.search_users_recipes(self._user[0], keyword)
         return recipes
 
     def add_recipes(self, name, instructions):

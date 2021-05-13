@@ -60,20 +60,31 @@ class RecipesDatabase:
 
         return not bool(recipe_exists)
 
-    def search_users_recipes(self, user_id):
+    def search_users_recipes(self, user_id, keyword=None):
         """Searches and returns rows that contain the given argument from data table recipes.
 
         Args:
             user_id (integer): The id of user that added the recipe(s).
+            keyword (string, default None): A string variable used to filter the search results.
+            If none are given, the query returns all user's recipes.
 
         Returns:
             list or None: Depending on the result of the query, the function returns:
             the rows as a list containing tuples;
             None, if the table has no rows with the given user id.
         """
+        if keyword:
+            keyword = f'%{keyword}%'
 
-        recipes = self._db.execute(
-            "SELECT * FROM recipes WHERE user_id=?", [user_id]).fetchall()
+            recipes = self._db.execute(
+                "SELECT * FROM recipes WHERE user_id=? AND LOWER(name) LIKE LOWER(?) OR LOWER(instructions) LIKE LOWER(?)", 
+                [user_id, keyword, keyword]).fetchall()
+
+        else:
+
+            recipes = self._db.execute(
+                "SELECT * FROM recipes WHERE user_id=?", [user_id]).fetchall()
+
 
         if recipes != []:
             return recipes

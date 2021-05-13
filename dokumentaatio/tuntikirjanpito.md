@@ -29,4 +29,5 @@ Päivämäärä | Aika (tunneissa) | Mitä tehty
 3.5. | 2 | Arkkitehtuurikuvauksen päivitys
 3.5. | 1 | Käyttöohjeen teko
 13.5. | 2 | Käyttäjätietokannan pientä muokkausta, virheilmoitusten lisäämistä
-Yht: | 55 |
+13.5. | 3 | Reseptien filtteröinti haun perusteella
+Yht: | 58 |

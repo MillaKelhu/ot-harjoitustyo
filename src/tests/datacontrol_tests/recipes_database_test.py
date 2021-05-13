@@ -47,6 +47,15 @@ class TestUserDatabase(unittest.TestCase):
         returns = recipes_database.search_users_recipes(3)
         self.assertEqual(returns, None)
 
+    def test_search_users_recipe_with_keyword_finds_recipes_correctly(self):
+        returns = recipes_database.search_users_recipes(1, "bread")
+        self.assertEqual(returns, [(1, 1, "Sandwich",
+                         "Take a bread and butter it.")])
+
+    def test_search_users_recipe_returns_None_with_nonexistent_keyword(self):
+        returns = recipes_database.search_users_recipes(1, "salad")
+        self.assertEqual(returns, None)
+
     def test_get_all_recipes_works_correctly(self):
         recipes = recipes_database.get_all_recipes()
 

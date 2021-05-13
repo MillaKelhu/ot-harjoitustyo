@@ -22,6 +22,8 @@ class BookView:
         self._handle_logout = handle_logout
         self._handle_new_recipe = handle_new_recipe
         self._handle_recipe = handle_recipe
+        self._search_entry = None
+        self._buttons = []
         cookbookapp_functions.no_chosen_recipe()
 
         self._initialize()
@@ -51,6 +53,20 @@ class BookView:
         book_name_label.grid(row=0, column=0, columnspan=2, sticky=(
             constants.E, constants.W), padx=5, pady=15)
 
+    def _initialize_search_entry(self):
+        self._search_entry = ttk.Entry(master=self._frame)
+
+        search_button = ttk.Button(
+            master=self._frame,
+            text="Search",
+            command=self._handler_search
+        )
+
+        self._search_entry.grid(row=2, column=0, columnspan=2, sticky=(
+            constants.E, constants.W), padx=5, pady=15)
+        search_button.grid(row=2, column=2, sticky=(
+            constants.E, constants.W), padx=5, pady=15)
+
     def _handler_recipe(self, recipe_name):
         """Switches window to recipe window according to the chosen recipe.
 
@@ -61,13 +77,20 @@ class BookView:
         cookbookapp_functions.set_chosen_recipe(recipe_name)
         self._handle_recipe()
 
-    def _initialize_recipe_buttons(self):
+    def _handler_search(self):
+        self._destroy_recipe_buttons()
+
+        keyword = str(self._search_entry.get())
+
+        self._initialize_recipe_buttons(keyword)
+
+    def _initialize_recipe_buttons(self, keyword=None):
         """Constructs buttons that display a recipe's name. 
         The buttons have the function to set the variable _chosen_recipe in class CookbookAppFunctions,
         and change the view into RecipeView().
         """
 
-        recipes = cookbookapp_functions.users_recipes()
+        recipes = cookbookapp_functions.users_recipes(keyword)
 
         if recipes is not None:
 
@@ -80,8 +103,16 @@ class BookView:
                     command=lambda recipe_name=recipe[2]: self._handler_recipe(
                         recipe_name)
                 )
-                recipe_button.grid(row=2+i, column=0, columnspan=4,
+                recipe_button.grid(row=3+i, column=0, columnspan=4,
                                    sticky=(constants.E, constants.W), padx=5, pady=5)
+                
+                self._buttons.append(recipe_button)
+
+    def _destroy_recipe_buttons(self):
+        for button in self._buttons:
+            button.destroy()
+        
+        self._buttons = []
 
     def _initialize(self):
         """Initializes the cookbook -window with necessary elements.
@@ -107,6 +138,8 @@ class BookView:
                                sticky=(constants.W), padx=5, pady=5)
         logout_button.grid(row=1, column=1, columnspan=2,
                            sticky=(constants.E), padx=5, pady=5)
+
+        self._initialize_search_entry()
 
         self._initialize_recipe_buttons()
 
