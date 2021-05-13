@@ -128,17 +128,13 @@ class RecipesDatabase:
 
         Returns:
             tuple or None: Depending on the result of the query, the function returns:
-            a tuple containing the modified recipe;
-            None, if the table has no row with the given user id and recipe name.
+            a tuple containing the modified recipe.
         """
 
-        recipe = self.search_recipe(user_id, name)
-
-        if recipe:
-            self._db.execute("UPDATE recipes SET instructions=? WHERE user_id=? AND name=?", [
+        self._db.execute("UPDATE recipes SET instructions=? WHERE user_id=? AND name=?", [
                              new_instructions, user_id, name])
 
-            recipe = self.search_recipe(user_id, name)
+        recipe = self.search_recipe(user_id, name)
 
         return recipe
 
@@ -150,18 +146,13 @@ class RecipesDatabase:
             name (string): The name of the recipe.
 
         Returns:
-            boolean: A boolean that tells whether or not a row with given
-            arguments exists in the table, and consequently whether or
-            not it was removed successfully.
+            True
         """
 
-        recipe = self.search_recipe(user_id, name)
-
-        if recipe:
-            self._db.execute("DELETE FROM recipes WHERE user_id=? AND name=?", [
+        self._db.execute("DELETE FROM recipes WHERE user_id=? AND name=?", [
                 user_id, name])
 
-        return bool(recipe)
+        return True
 
 
 recipes_database = RecipesDatabase(get_database_connection())

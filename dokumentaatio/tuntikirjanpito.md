@@ -30,4 +30,5 @@ Päivämäärä | Aika (tunneissa) | Mitä tehty
 3.5. | 1 | Käyttöohjeen teko
 13.5. | 2 | Käyttäjätietokannan pientä muokkausta, virheilmoitusten lisäämistä
 13.5. | 3 | Reseptien filtteröinti haun perusteella
-Yht: | 58 |
+13.5. | 1 | Tarpeettomien tarkistushakujen poisto, testien muokkaus
+Yht: | 59 |

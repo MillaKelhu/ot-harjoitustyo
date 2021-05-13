@@ -40,7 +40,7 @@ Mahdollisuuksien mukaan sovellusta parannetaan esim. seuraavin toiminnallisuuksi
 - [x] Reseptien muokkaus
 - [x] Reseptien poisto
 - [ ] Käyttäjä pystyy luomaan eri kategorioita, esim. jälkiruoka, vegaani, pääsiäinen, tms. joihin reseptit voi luokitella 
-- [ ] Reseptien haku eri hakuperusteilla:
+- [x] Reseptien haku eri hakuperusteilla:
   * Nimi
   * Raaka-aine
   * Em. kategoria

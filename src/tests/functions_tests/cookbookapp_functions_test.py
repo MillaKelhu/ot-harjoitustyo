@@ -62,28 +62,22 @@ class FakeRecipesDatabase:
         self._recipes = []
 
     def modify_recipe(self, user_id, name, new_instructions):
+        for recipes in self._recipes:
+            if recipes[1] == user_id and recipes[2] == name:
+                recipes[3] == new_instructions
+                break
+
         recipe = self.search_recipe(user_id, name)
-
-        if recipe:
-            for recipes in self._recipes:
-                if recipes[1] == user_id and recipes[2] == name:
-                    recipes[3] == new_instructions
-                    break
-
-            recipe = self.search_recipe(user_id, name)
 
         return recipe
 
     def delete_recipe(self, user_id, name):
-        recipe = self.search_recipe(user_id, name)
+        for recipes in self._recipes:
+            if recipes[1] == user_id and recipes[2] == name:
+                self._recipes.remove(recipes)
+                break
 
-        if recipe:
-            for recipes in self._recipes:
-                if recipes[1] == user_id and recipes[2] == name:
-                    self._recipes.remove(recipes)
-                    break
-
-        return bool(recipe)
+        return True
 
 
 class TestCookBookAppFunctions(unittest.TestCase):
@@ -108,7 +102,7 @@ class TestCookBookAppFunctions(unittest.TestCase):
         returns = self.cookbookapp_functions.log_in("Tony", "123")
         self.assertEqual(returns, False)
 
-    def test_log_returns_false_with_wrong_password(self):
+    def test_log_in_returns_false_with_wrong_password(self):
         returns = self.cookbookapp_functions.log_in("Leon", "456")
         self.assertEqual(returns, False)
 
@@ -159,11 +153,6 @@ class TestCookBookAppFunctions(unittest.TestCase):
         self.cookbookapp_functions.log_in("Leon", "123")
         returns = self.cookbookapp_functions.set_chosen_recipe("Glass of milk")
         self.assertEqual(returns, True)
-
-    def test_set_chosen_recipe_returns_False_with_nonexisting_recipe(self):
-        self.cookbookapp_functions.log_in("Leon", "123")
-        returns = self.cookbookapp_functions.set_chosen_recipe("Cake")
-        self.assertEqual(returns, False)
 
     def test_get_chosen_recipe_default_is_None(self):
         returns = self.cookbookapp_functions.get_chosen_recipe()

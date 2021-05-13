@@ -15,14 +15,6 @@ class TestUserDatabase(unittest.TestCase):
         self.assertEqual(returns, (1, 1, "Sandwich",
                          "Take a bread and butter it."))
 
-    def test_search_recipe_nonexistent_recipe_returns_None(self):
-        returns = recipes_database.search_recipe(1, "Salad")
-        self.assertEqual(returns, None)
-
-    def test_search_recipe_nonexistent_user_returns_None(self):
-        returns = recipes_database.search_recipe(3, "Cocoa")
-        self.assertEqual(returns, None)
-
     def test_add_recipe_adds_previously_nonexistent_recipe_correctly(self):
         returns = recipes_database.add_recipe(
             2, "Salad", "Wash a salad and put its leaves in a bowl.")
@@ -42,10 +34,6 @@ class TestUserDatabase(unittest.TestCase):
         returns = recipes_database.search_users_recipes(1)
         self.assertEqual(returns, [(1, 1, "Sandwich", "Take a bread and butter it."), (
             2, 1, "Glass of milk", "Pour milk in glass.")])
-
-    def test_search_users_recipes_returns_nonexistent_users_recipes_as_None(self):
-        returns = recipes_database.search_users_recipes(3)
-        self.assertEqual(returns, None)
 
     def test_search_users_recipe_with_keyword_finds_recipes_correctly(self):
         returns = recipes_database.search_users_recipes(1, "bread")
@@ -81,23 +69,7 @@ class TestUserDatabase(unittest.TestCase):
 
         self.assertEqual(returns, None)
 
-    def test_modify_recipe_returns_None_with_nonexisting_user(self):
-        returns = recipes_database.modify_recipe(
-            3, "Noodles", "Put on some cup noodles")
-
-        self.assertEqual(returns, None)
-
     def test_delete_recipe_works_correctly(self):
         returns = recipes_database.delete_recipe(1, "Sandwich")
 
         self.assertEqual(returns, True)
-
-    def test_delete_recipe_returns_False_with_nonexisting_recipe(self):
-        returns = recipes_database.delete_recipe(1, "Noodles")
-
-        self.assertEqual(returns, False)
-
-    def test_delete_recipe_returns_False_with_nonexisting_user(self):
-        returns = recipes_database.delete_recipe(3, "Sandwich")
-
-        self.assertEqual(returns, False)
