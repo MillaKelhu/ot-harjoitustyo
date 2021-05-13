@@ -1,6 +1,8 @@
 from tkinter import Tk, ttk, constants
 from functions.cookbookapp_functions import cookbookapp_functions
 
+class InvalidLength(Exception):
+    pass
 
 class LoginView:
     """Class that initializes log in -window of ui.

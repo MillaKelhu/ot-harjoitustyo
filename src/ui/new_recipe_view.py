@@ -21,6 +21,7 @@ class NewRecipeView:
         self._handle_return = handle_return
         self._name_entry = None
         self._instructions_text = None
+        self._error_label = None
 
         self._initialize()
 
@@ -76,23 +77,46 @@ class NewRecipeView:
         self._initialize_instructions_field()
 
         create_new_recipe_button.grid(
-            row=14, column=0, columnspan=2, sticky=(constants.W), padx=5, pady=5)
+            row=15, column=0, columnspan=2, sticky=(constants.W), padx=5, pady=5)
 
         return_without_saving_button.grid(
-            row=14, column=1, columnspan=2, sticky=(constants.E), padx=5, pady=5)
+            row=15, column=1, columnspan=2, sticky=(constants.E), padx=5, pady=5)
 
         self._frame.grid_columnconfigure(0, weight=1, minsize=100)
 
     def _check_entries(self):
         """Checks the length of input and and uses function add_recipes() from class CookbookAppFunctions to either change the window to BookView()
-        or display an error label (latter not yet implemented).
+        or display an error label.
         """
 
         name_data = self._name_entry.get()
         instructions_data = self._instructions_text.get(1.0, "end")
 
-        if len(name_data) > 0 and len(instructions_data) > 0:
-            cookbookapp_functions.add_recipes(name_data, instructions_data)
-            self._handle_return()
+        if 0 < len(name_data) < 100:
+            if 0 < len(instructions_data) < 5001:
+                cookbookapp_functions.add_recipes(name_data, instructions_data)
+                self._handle_return()
+            else:
+                self._show_error_label("Error: instructions must be 1-5000 characters long")
         else:
-            pass
+            self._show_error_label("Error: name must be 1-99 characters long")
+
+    def _show_error_label(self, message):
+        """Initializes an error label. As there can be several error labels, the function first hides any error labels that already exist.
+
+        Args:
+            message (string): A message of the error label.
+        """
+
+        self._hide_error_label()
+
+        self._error_label = ttk.Label(master=self._frame, text=message)
+
+        self._error_label.grid(row=14, column=0, columnspan=2, padx=5, pady=5)
+
+    def _hide_error_label(self):
+        """Hides an existing error label without destroying it.
+        """
+
+        if self._error_label:
+            self._error_label.grid_remove()

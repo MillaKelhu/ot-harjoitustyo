@@ -50,19 +50,16 @@ class UserDatabase:
             password (string): A new user's password.
 
         Returns:
-            boolean: Variable user_exists contains the result of function search_user
-            with the given arguments, and that is turned into a boolean.
-            The function returns the opposite of this boolean, signifying whether or not
-            a new row, and thus a user, was added successfully.
+            boolean: A boolean that signifies whether or not new row was added successfully.
         """
 
-        user_exists = self.search_user(username)
-
-        if user_exists is None:
+        try:
             self._db.execute(
                 "INSERT INTO users (username, password) VALUES (?, ?)", [username, password])
+        except self._db.IntegrityError:
+            return False
 
-        return not bool(user_exists)
+        return True
 
     def erase_all_users(self):
         """Deletes all rows from data table users.

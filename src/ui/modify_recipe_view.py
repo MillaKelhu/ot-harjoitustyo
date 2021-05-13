@@ -20,6 +20,7 @@ class ModifyRecipeView:
         self._frame = None
         self._handle_return = handle_return
         self._recipe = cookbookapp_functions.get_chosen_recipe()
+        self._error_label = None
 
         self._initialize()
 
@@ -77,20 +78,40 @@ class ModifyRecipeView:
         self._initialize_new_instructions_field()
 
         save_modified_button.grid(
-            row=13, column=0, columnspan=2, sticky=(constants.W), padx=5, pady=5)
+            row=15, column=0, columnspan=2, sticky=(constants.W), padx=5, pady=5)
 
         return_without_saving_button.grid(
-            row=13, column=1, columnspan=2, sticky=(constants.E), padx=5, pady=5)
+            row=15, column=1, columnspan=2, sticky=(constants.E), padx=5, pady=5)
 
     def _save_new_instructions(self):
         """Checks the length of input and and uses function modify_chosen_recipe() from class CookbookAppFunctions to either change the window to RecipeView()
-        or display an error label (latter not yet implemented).
+        or display an error label.
         """
 
         new_instructions_data = self._new_instructions_text.get(1.0, "end")
 
-        if len(new_instructions_data) > 0:
+        if 0 < len(new_instructions_data) < 5001:
             cookbookapp_functions.modify_chosen_recipe(new_instructions_data)
             self._handle_return()
         else:
-            pass
+            self._show_error_label("Error: instructions must be 1-5000 characters long")
+
+    def _show_error_label(self, message):
+        """Initializes an error label. As there can be several error labels, the function first hides any error labels that already exist.
+
+        Args:
+            message (string): A message of the error label.
+        """
+
+        self._hide_error_label()
+
+        self._error_label = ttk.Label(master=self._frame, text=message)
+
+        self._error_label.grid(row=14, column=0, columnspan=2, padx=5, pady=5)
+
+    def _hide_error_label(self):
+        """Hides an existing error label without destroying it.
+        """
+
+        if self._error_label:
+            self._error_label.grid_remove()

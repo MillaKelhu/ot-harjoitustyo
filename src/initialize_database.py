@@ -25,9 +25,9 @@ def create_tables(connection):
 
     cursor = connection.cursor()
 
-    cursor.execute('''CREATE TABLE IF NOT EXISTS users
-                    (id INTEGER PRIMARY KEY, username TEXT, password TEXT)''')
-    cursor.execute('''CREATE TABLE IF NOT EXISTS recipes
+    cursor.execute('''CREATE TABLE users
+                    (id INTEGER PRIMARY KEY, username TEXT UNIQUE, password TEXT)''')
+    cursor.execute('''CREATE TABLE recipes
                     (id INTEGER PRIMARY KEY, user_id INTEGER REFERENCES users, 
                     name TEXT, instructions TEXT)''')
 

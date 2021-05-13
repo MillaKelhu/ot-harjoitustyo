@@ -2,6 +2,9 @@ from datacontrol.users_database import user_database as default_user_database
 from datacontrol.recipes_database import recipes_database as default_recipes_database
 
 
+class InvalidLength(Exception):
+    pass
+
 class CookbookAppFunctions:
     """Class that provides the necessary services and functions for a cookbook app.
     """
@@ -67,6 +70,9 @@ class CookbookAppFunctions:
             boolean: The returned boolean informs whether or not
             a new user was created successfully.
         """
+        
+        if 99 > username < 5 or 99 > password < 5:
+            raise InvalidLength("Username and password must be between 5 to 99 characters long.")
 
         user_added = self._users.add_user(username, password)
         return user_added

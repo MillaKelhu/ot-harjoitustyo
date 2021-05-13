@@ -93,16 +93,16 @@ class SigninView:
         new_username_data = self._new_username_entry.get()
         password_data = str(self._password_entry.get())
 
-        if len(new_username_data) > 0:
-            if len(password_data) > 0:
+        if 0 < len(new_username_data) < 100:
+            if 0 < len(password_data) < 100:
                 if cookbookapp_functions.sign_in(new_username_data, password_data):
                     self._handle_return()
                 else:
                     self._show_error_label("Error: username is taken")
             else:
-                self._show_error_label("Error: password must be longer")
+                self._show_error_label("Error: password must be 1-99 characters long")
         else:
-            self._show_error_label("Error: username must be longer")
+            self._show_error_label("Error: username must be 1-99 characters long")
 
     def _show_error_label(self, message):
         """Initializes an error label. As there can be several error labels, the function first hides any error labels that already exist.
