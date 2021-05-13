@@ -71,9 +71,6 @@ class CookbookAppFunctions:
             a new user was created successfully.
         """
         
-        if 99 > username < 5 or 99 > password < 5:
-            raise InvalidLength("Username and password must be between 5 to 99 characters long.")
-
         user_added = self._users.add_user(username, password)
         return user_added
 
