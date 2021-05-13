@@ -97,7 +97,8 @@ class NewRecipeView:
                 cookbookapp_functions.add_recipes(name_data, instructions_data)
                 self._handle_return()
             else:
-                self._show_error_label("Error: instructions must be 1-5000 characters long")
+                self._show_error_label(
+                    "Error: instructions must be 1-5000 characters long")
         else:
             self._show_error_label("Error: name must be 1-99 characters long")
 

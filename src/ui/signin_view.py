@@ -100,9 +100,11 @@ class SigninView:
                 else:
                     self._show_error_label("Error: username is taken")
             else:
-                self._show_error_label("Error: password must be 1-99 characters long")
+                self._show_error_label(
+                    "Error: password must be 1-99 characters long")
         else:
-            self._show_error_label("Error: username must be 1-99 characters long")
+            self._show_error_label(
+                "Error: username must be 1-99 characters long")
 
     def _show_error_label(self, message):
         """Initializes an error label. As there can be several error labels, the function first hides any error labels that already exist.

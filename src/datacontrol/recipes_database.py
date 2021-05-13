@@ -77,14 +77,13 @@ class RecipesDatabase:
             keyword = f'%{keyword}%'
 
             recipes = self._db.execute(
-                "SELECT * FROM recipes WHERE user_id=? AND LOWER(name) LIKE LOWER(?) OR LOWER(instructions) LIKE LOWER(?)", 
+                "SELECT * FROM recipes WHERE user_id=? AND LOWER(name) LIKE LOWER(?) OR LOWER(instructions) LIKE LOWER(?)",
                 [user_id, keyword, keyword]).fetchall()
 
         else:
 
             recipes = self._db.execute(
                 "SELECT * FROM recipes WHERE user_id=?", [user_id]).fetchall()
-
 
         if recipes != []:
             return recipes

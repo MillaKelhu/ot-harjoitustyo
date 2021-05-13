@@ -94,7 +94,8 @@ class ModifyRecipeView:
             cookbookapp_functions.modify_chosen_recipe(new_instructions_data)
             self._handle_return()
         else:
-            self._show_error_label("Error: instructions must be 1-5000 characters long")
+            self._show_error_label(
+                "Error: instructions must be 1-5000 characters long")
 
     def _show_error_label(self, message):
         """Initializes an error label. As there can be several error labels, the function first hides any error labels that already exist.

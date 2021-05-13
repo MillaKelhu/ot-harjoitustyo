@@ -49,10 +49,10 @@ class FakeRecipesDatabase:
         returns = []
         for recipe in self._recipes:
             if recipe[1] == user_id:
-                    if keyword:
-                        if keyword not in recipe[2] and keyword not in recipe[3]:
-                            continue
-                    returns.append(recipe)
+                if keyword:
+                    if keyword not in recipe[2] and keyword not in recipe[3]:
+                        continue
+                returns.append(recipe)
 
         if returns != []:
             return returns
@@ -146,7 +146,8 @@ class TestCookBookAppFunctions(unittest.TestCase):
     def test_users_recipes_returns_recipes_correctly_with_keyword_when_logged_in(self):
         self.cookbookapp_functions.log_in("Leon", "123")
         returns = self.cookbookapp_functions.users_recipes("bread")
-        self.assertEqual(returns, [(1, 1, "Sandwich", "Take a bread and butter it.")])
+        self.assertEqual(
+            returns, [(1, 1, "Sandwich", "Take a bread and butter it.")])
 
     def test_add_recipes_returns_True_correctly_when_logged_in(self):
         self.cookbookapp_functions.log_in("Stansfield", "123")

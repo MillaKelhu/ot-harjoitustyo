@@ -105,13 +105,13 @@ class BookView:
                 )
                 recipe_button.grid(row=3+i, column=0, columnspan=4,
                                    sticky=(constants.E, constants.W), padx=5, pady=5)
-                
+
                 self._buttons.append(recipe_button)
 
     def _destroy_recipe_buttons(self):
         for button in self._buttons:
             button.destroy()
-        
+
         self._buttons = []
 
     def _initialize(self):

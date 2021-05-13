@@ -5,6 +5,7 @@ from datacontrol.recipes_database import recipes_database as default_recipes_dat
 class InvalidLength(Exception):
     pass
 
+
 class CookbookAppFunctions:
     """Class that provides the necessary services and functions for a cookbook app.
     """
@@ -70,7 +71,7 @@ class CookbookAppFunctions:
             boolean: The returned boolean informs whether or not
             a new user was created successfully.
         """
-        
+
         user_added = self._users.add_user(username, password)
         return user_added
 
@@ -87,7 +88,7 @@ class CookbookAppFunctions:
 
     def users_recipes(self, keyword=None):
         """Returns all recipes in sql data table recipes where user id is that of variable _user's.
-        
+
         Args:
             keyword (string, default None): A string variable used to filter the search results.
             If none are given, the query returns all user's recipes.
