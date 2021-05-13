@@ -28,4 +28,5 @@ Päivämäärä | Aika (tunneissa) | Mitä tehty
 3.5. | 2 | Testikattavuuden paikkailua
 3.5. | 2 | Arkkitehtuurikuvauksen päivitys
 3.5. | 1 | Käyttöohjeen teko
-Yht: | 53 |
+13.5. | 2 | Käyttäjätietokannan pientä muokkausta, virheilmoitusten lisäämistä
+Yht: | 55 |
