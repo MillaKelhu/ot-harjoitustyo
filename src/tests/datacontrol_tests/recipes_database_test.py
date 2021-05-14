@@ -2,7 +2,7 @@ import unittest
 from datacontrol.recipes_database import recipes_database
 
 
-class TestUserDatabase(unittest.TestCase):
+class TestRecipesDatabase(unittest.TestCase):
     def setUp(self):
         recipes_database.erase_all_recipes()
         recipes_database.add_recipe(
