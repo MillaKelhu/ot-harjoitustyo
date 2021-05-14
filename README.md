@@ -14,7 +14,11 @@ Sovelluksen avulla on mahdollista pitää kirjaa omista resepteistä, ja sovellu
 
 [Arkkitehtuuri](https://github.com/MillaKelhu/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
 
+[Testausdokumentti](https://github.com/MillaKelhu/ot-harjoitustyo/blob/master/dokumentaatio/testaus.md)
+
 ## Asennus
+
+Jotta ohjelman voi asentaa ja suorittaa, varmista, että [poetry](https://python-poetry.org/docs/#installation) on asennettu ja [python](https://www.python.org/downloads/) on vähintäänkin 3.6.
 
 1. Tarvittavat riippuvuudet asennetaan komennolla
 `poetry install`
