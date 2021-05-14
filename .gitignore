@@ -6,3 +6,4 @@ __pycache__
 *.db
 data/database.sqlite
 data/test-database.sqlite
+.env
