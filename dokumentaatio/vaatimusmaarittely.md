@@ -2,14 +2,14 @@
 
 ## Sovelluksen tarkoitus
 
-Sovelluksen tarkoituksena on reseptikirjan luominen ja ylläpito.
+Sovelluksen tarkoituksena on henkilökohtaisen reseptikirjan luominen ja ylläpito.
 
 ## Käyttäjät
 
-Ainakin aluksi sovelluksessa on ainoastaan yhden tyyppisiä käyttäjiä, eli ns. _normaaleja käyttäjiä_. Myöhemmin voidaan ehkä lisätä sovellukseen jonkinlainen ylläpidosta vastaava käyttäjärooli.  
+Sovelluksessa on ainoastaan yhden tyyppisiä käyttäjiä, eli ns. _normaaleja käyttäjiä_. Käyttäjä on tekemisissä ainoastaan oman tilinsä ja sen sisältämien reseptien kanssa, eikä muiden käyttäjien kanssa ole kanssakäymistä.
 
 ## Käyttöliittymäluonnos
-![](https://raw.githubusercontent.com/MillaKelhu/ot-harjoitustyo/master/dokumentaatio/kuvat/kayttoliittymaluonnos.png)
+![](https://raw.githubusercontent.com/MillaKelhu/ot-harjoitustyo/master/dokumentaatio/kuvat/kayttoliittymaluonnos_vko7.png)
 
 ## Sovelluksen toiminnallisuudet
 
