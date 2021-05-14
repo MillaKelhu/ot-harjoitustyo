@@ -9,13 +9,13 @@ Tietojen pysyväistallennukseen tarvittavan sqlite-tiedoston nimen voi halutessa
 Jotta ohjelman voi asentaa ja suorittaa, varmista, että [poetry](https://python-poetry.org/docs/#installation) on asennettu ja [python](https://www.python.org/downloads/) on vähintäänkin 3.6.
 
 ## Ohjelman asennus
-Asenna ensin tarvittavat riippuvuudet komennolla 
+1. Tarvittavat riippuvuudet asennetaan komennolla
 `poetry install`
 
-Suorita seuraavaksi tarvittavat alustustoimenpiteet komennolla
+2. Alustustoimenpiteet suoritetaan komennolla
 `poetry run invoke initialize-database`
 
-Sovellus käynnistetään komennolla
+3. Sovellus käynnistetään komennolla
 `poetry run invoke start`
 
 ## Käynnistämisen jälkeen
