@@ -31,4 +31,6 @@ Päivämäärä | Aika (tunneissa) | Mitä tehty
 13.5. | 2 | Käyttäjätietokannan pientä muokkausta, virheilmoitusten lisäämistä
 13.5. | 3 | Reseptien filtteröinti haun perusteella
 13.5. | 1 | Tarpeettomien tarkistushakujen poisto, testien muokkaus
-Yht: | 59 |
+13.5. | 1 | Dokumentoinnin lisääminen ja päivitys
+14.5. | 2 | Dokumentoinnin lisääminen ja päivitys
+Yht: | 62 |
