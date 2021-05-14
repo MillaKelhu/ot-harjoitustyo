@@ -1,6 +1,7 @@
 from datacontrol.users_database import user_database as default_user_database
 from datacontrol.recipes_database import recipes_database as default_recipes_database
 
+
 class CookbookAppFunctions:
     """Class that provides the necessary services and functions for a cookbook app.
     """

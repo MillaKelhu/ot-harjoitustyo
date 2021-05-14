@@ -132,7 +132,7 @@ class RecipesDatabase:
         """
 
         self._db.execute("UPDATE recipes SET instructions=? WHERE user_id=? AND name=?", [
-                             new_instructions, user_id, name])
+            new_instructions, user_id, name])
 
         recipe = self.search_recipe(user_id, name)
 
@@ -150,7 +150,7 @@ class RecipesDatabase:
         """
 
         self._db.execute("DELETE FROM recipes WHERE user_id=? AND name=?", [
-                user_id, name])
+            user_id, name])
 
         return True
 
